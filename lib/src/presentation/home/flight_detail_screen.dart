@@ -4,6 +4,7 @@ import 'package:hexto/src/presentation/common/base/base_screen.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:hexto/src/core/constant/string_constant/string_constant.dart';
 import 'package:hexto/src/core/theme/app_color.dart';
+import 'package:intl/intl.dart';
 
 class FlightDetailScreen extends BaseScreen {
   static const route = 'FlightDetailScreen';
@@ -30,9 +31,15 @@ class FlightDetailScreen extends BaseScreen {
               const Divider(),
               _buildRow(FlightDetailScreenStringConstant.flightId, flight.flightId),
               const Divider(),
-              _buildRow(FlightDetailScreenStringConstant.schedule, flight.scheduleDateTime ?? ''),
+              _buildRow(
+                FlightDetailScreenStringConstant.schedule,
+                _formatDate(flight.scheduleDateTime),
+              ),
               const Divider(),
-              _buildRow(FlightDetailScreenStringConstant.estimated, flight.estimatedDateTime ?? ''),
+              _buildRow(
+                FlightDetailScreenStringConstant.estimated,
+                _formatDate(flight.estimatedDateTime),
+              ),
               const Divider(),
               _buildRow(FlightDetailScreenStringConstant.airport, flight.airport ?? ''),
               const Divider(),
@@ -71,6 +78,18 @@ class FlightDetailScreen extends BaseScreen {
         ],
       ),
     );
+  }
+
+  String _formatDate(String? date) {
+    if (date == null || date.isEmpty) {
+      return '-';
+    }
+    try {
+      final parsed = DateTime.parse(date);
+      return DateFormat('yyyy-MM-dd HH:mm').format(parsed);
+    } catch (_) {
+      return date;
+    }
   }
 
   @override

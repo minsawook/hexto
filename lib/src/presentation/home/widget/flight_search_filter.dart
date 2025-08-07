@@ -23,7 +23,7 @@ class _FlightSearchFilter extends StatelessWidget {
           child: TextField(
             controller: controller,
             decoration: InputDecoration(
-              labelText: HomeScreenStringConstant.flightIdLabel,
+              labelText: HomeScreenStringConstant.arrivalLabel,
               prefixIcon: const Icon(Icons.search, color: AppColors.primary),
               focusedBorder: const OutlineInputBorder(
                 borderSide: BorderSide(color: AppColors.primary),

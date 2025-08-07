@@ -3,7 +3,6 @@ class CommonStringConstant {
 }
 
 class HomeScreenStringConstant {
-  static const String flightIdLabel = '항공편 번호';
   static const String airlineHint = '항공사';
   static const String allAirlines = '전체 항공사';
   static const String departureLabel = '출발지';
@@ -11,6 +10,8 @@ class HomeScreenStringConstant {
   static const String airlineLabel = '항공사';
   static const String flightIdTitle = '항공편 ID';
   static const String errorPrefix = '오류';
+  static const String scheduleSort = '예정 시간';
+  static const String estimatedSort = '예상 시간';
 }
 
 class FlightDetailScreenStringConstant {

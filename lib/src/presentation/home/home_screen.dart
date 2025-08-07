@@ -14,6 +14,8 @@ import '../../core/util/debouncer.dart';
 part './widget/flight_list_item.dart';
 part 'widget/flight_search_filter.dart';
 
+enum _SortField { schedule, estimated }
+
 class HomeScreen extends BaseScreen {
   static const route = 'HomeScreen';
 
@@ -24,6 +26,8 @@ class HomeScreen extends BaseScreen {
     final TextEditingController searchController = useTextEditingController();
     final searchText = useState('');
     final selectedAirline = useState<String?>(null);
+    final sortField = useState<_SortField>(_SortField.schedule);
+    final isAscending = useState(true);
 
     final Debouncer debouncer = useMemoized(Debouncer.new);
     useEffect(() => debouncer.dispose, const []);
@@ -36,11 +40,28 @@ class HomeScreen extends BaseScreen {
         final airlines = flights.map((e) => e.airline).toSet().toList();
         final filteredFlights = flights.where((flight) {
           final matchesSearch = searchText.value.isEmpty ||
-              flight.flightId.contains(searchText.value);
+              (flight.airport ?? '')
+                  .toLowerCase()
+                  .contains(searchText.value.toLowerCase());
           final matchesAirline = selectedAirline.value == null ||
               flight.airline == selectedAirline.value;
           return matchesSearch && matchesAirline;
         }).toList();
+
+        filteredFlights.sort((a, b) {
+          DateTime aDate;
+          DateTime bDate;
+          if (sortField.value == _SortField.schedule) {
+            aDate = DateTime.tryParse(a.scheduleDateTime ?? '') ?? DateTime(0);
+            bDate = DateTime.tryParse(b.scheduleDateTime ?? '') ?? DateTime(0);
+          } else {
+            aDate = DateTime.tryParse(a.estimatedDateTime ?? '') ?? DateTime(0);
+            bDate = DateTime.tryParse(b.estimatedDateTime ?? '') ?? DateTime(0);
+          }
+          return isAscending.value
+              ? aDate.compareTo(bDate)
+              : bDate.compareTo(aDate);
+        });
 
         return Padding(
           padding: const EdgeInsets.all(16.0),
@@ -54,6 +75,44 @@ class HomeScreen extends BaseScreen {
                   searchText.value = text;
                 }),
                 onAirlineChanged: (airline) => selectedAirline.value = airline,
+              ),
+              const SizedBox(height: 8),
+              Wrap(
+                spacing: 8,
+                children: [
+                  FilterChip(
+                    label: Text(
+                      '${HomeScreenStringConstant.scheduleSort}'
+                      '${sortField.value == _SortField.schedule ? (isAscending.value ? ' ↑' : ' ↓') : ''}',
+                    ),
+                    selected: sortField.value == _SortField.schedule,
+                    selectedColor: AppColors.secondary,
+                    onSelected: (_) {
+                      if (sortField.value == _SortField.schedule) {
+                        isAscending.value = !isAscending.value;
+                      } else {
+                        sortField.value = _SortField.schedule;
+                        isAscending.value = true;
+                      }
+                    },
+                  ),
+                  FilterChip(
+                    label: Text(
+                      '${HomeScreenStringConstant.estimatedSort}'
+                      '${sortField.value == _SortField.estimated ? (isAscending.value ? ' ↑' : ' ↓') : ''}',
+                    ),
+                    selected: sortField.value == _SortField.estimated,
+                    selectedColor: AppColors.secondary,
+                    onSelected: (_) {
+                      if (sortField.value == _SortField.estimated) {
+                        isAscending.value = !isAscending.value;
+                      } else {
+                        sortField.value = _SortField.estimated;
+                        isAscending.value = true;
+                      }
+                    },
+                  ),
+                ],
               ),
               const SizedBox(height: 16),
               Expanded(
