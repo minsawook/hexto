@@ -6,6 +6,8 @@ import 'package:hexto/src/presentation/common/base/base_screen.dart';
 import 'package:hexto/src/presentation/common/component/loading_indicator.dart';
 import 'package:hexto/src/presentation/home/flight_detail_screen.dart';
 import 'package:hexto/src/presentation/home/provider/home_provider.dart';
+import 'package:hexto/src/core/constant/string_constant/string_constant.dart';
+import 'package:hexto/src/core/theme/app_color.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../core/util/debouncer.dart';
@@ -32,6 +34,13 @@ class HomeScreen extends BaseScreen {
       data: (data) {
         final flights = data.response.body.items.item;
         final airlines = flights.map((e) => e.airline).toSet().toList();
+        final filteredFlights = flights.where((flight) {
+          final matchesSearch = searchText.value.isEmpty ||
+              flight.flightId.contains(searchText.value);
+          final matchesAirline = selectedAirline.value == null ||
+              flight.airline == selectedAirline.value;
+          return matchesSearch && matchesAirline;
+        }).toList();
 
         return Padding(
           padding: const EdgeInsets.all(16.0),
@@ -49,9 +58,9 @@ class HomeScreen extends BaseScreen {
               const SizedBox(height: 16),
               Expanded(
                 child: ListView.builder(
-                  itemCount: flights.length,
+                  itemCount: filteredFlights.length,
                   itemBuilder: (context, index) {
-                    final item = flights[index];
+                    final item = filteredFlights[index];
                     return _FlightListItem(
                       item: item,
                       onTap: () => context.pushNamed(
@@ -67,7 +76,9 @@ class HomeScreen extends BaseScreen {
         );
       },
       loading: () => const Center(child: LoadingIndicator()),
-      error: (e, st) => Center(child: Text('Error: $e')),
+      error: (e, st) => Center(
+        child: Text('${HomeScreenStringConstant.errorPrefix}: $e'),
+      ),
     );
   }
 }
