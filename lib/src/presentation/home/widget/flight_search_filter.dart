@@ -1,7 +1,7 @@
 part of '../home_screen.dart';
+
 class _FlightSearchFilter extends StatelessWidget {
   const _FlightSearchFilter({
-
     required this.controller,
     required this.airlines,
     required this.onSearchChanged,
@@ -17,32 +17,53 @@ class _FlightSearchFilter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Row(
       children: [
-        TextField(
-          controller: controller,
-          decoration: const InputDecoration(
-            labelText: 'Flight ID',
-            prefixIcon: Icon(Icons.search),
-          ),
-          onChanged: onSearchChanged,
-        ),
-        const SizedBox(height: 8),
-        DropdownButton<String?>(
-          value: selectedAirline,
-          isExpanded: true,
-          hint: const Text('Airline'),
-          items: [
-            const DropdownMenuItem<String?> (
-              value: null,
-              child: Text('All Airlines'),
+        Expanded(
+          child: TextField(
+            controller: controller,
+            decoration: const InputDecoration(
+              labelText: HomeScreenStringConstant.arrivalLabel,
+              prefixIcon: Icon(Icons.search, color: AppColors.primary),
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: AppColors.primary),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: AppColors.primaryVariant),
+              ),
             ),
-            ...airlines.map((airline) => DropdownMenuItem<String?>(
-              value: airline,
-              child: Text(airline),
-            )),
-          ],
-          onChanged: onAirlineChanged,
+            onChanged: onSearchChanged,
+          ),
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 12),
+            decoration: BoxDecoration(
+              border: Border.all(color: AppColors.primaryVariant),
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: DropdownButtonHideUnderline(
+              child: DropdownButton<String?>(
+                value: selectedAirline,
+                isExpanded: true,
+                hint: const Text(HomeScreenStringConstant.airlineHint),
+                items: [
+                  const DropdownMenuItem<String?>(
+                    value: null,
+                    child: Text(HomeScreenStringConstant.allAirlines),
+                  ),
+                  ...airlines.map(
+                    (airline) => DropdownMenuItem<String?>(
+                      value: airline,
+                      child: Text(airline),
+                    ),
+                  ),
+                ],
+                onChanged: onAirlineChanged,
+              ),
+            ),
+          ),
         ),
       ],
     );

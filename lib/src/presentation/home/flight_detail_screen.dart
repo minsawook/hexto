@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:hexto/src/data/model/airport_response_model.dart';
 import 'package:hexto/src/presentation/common/base/base_screen.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:hexto/src/core/constant/string_constant/string_constant.dart';
+import 'package:hexto/src/core/theme/app_color.dart';
+import 'package:intl/intl.dart';
 
 class FlightDetailScreen extends BaseScreen {
   static const route = 'FlightDetailScreen';
@@ -12,17 +15,46 @@ class FlightDetailScreen extends BaseScreen {
 
   @override
   Widget buildScreen(BuildContext context, WidgetRef ref) {
-    return ListView(
+    return Padding(
       padding: const EdgeInsets.all(16),
-      children: [
-        _buildRow('Airline', flight.airline),
-        _buildRow('Flight ID', flight.flightId),
-        _buildRow('Schedule', flight.scheduleDateTime ?? ''),
-        _buildRow('Estimated', flight.estimatedDateTime ?? ''),
-        _buildRow('Airport', flight.airport ?? ''),
-        _buildRow('Gate', flight.gatenumber ?? ''),
-        _buildRow('Remark', flight.remark ?? ''),
-      ],
+      child: Card(
+        color: AppColors.surface,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              _buildRow(
+                  FlightDetailScreenStringConstant.airline, flight.airline),
+              const Divider(),
+              _buildRow(
+                  FlightDetailScreenStringConstant.flightId, flight.flightId),
+              const Divider(),
+              _buildRow(
+                FlightDetailScreenStringConstant.schedule,
+                _formatDate(flight.scheduleDateTime),
+              ),
+              const Divider(),
+              _buildRow(
+                FlightDetailScreenStringConstant.estimated,
+                _formatDate(flight.estimatedDateTime),
+              ),
+              const Divider(),
+              _buildRow(FlightDetailScreenStringConstant.airport,
+                  flight.airport ?? ''),
+              const Divider(),
+              _buildRow(FlightDetailScreenStringConstant.gate,
+                  flight.gatenumber ?? ''),
+              const Divider(),
+              _buildRow(
+                  FlightDetailScreenStringConstant.remark, flight.remark ?? ''),
+            ],
+          ),
+        ),
+      ),
     );
   }
 
@@ -36,17 +68,47 @@ class FlightDetailScreen extends BaseScreen {
             width: 100,
             child: Text(
               label,
-              style: const TextStyle(fontWeight: FontWeight.bold),
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                color: AppColors.textPrimary,
+              ),
             ),
           ),
-          Expanded(child: Text(value)),
+          Expanded(
+            child: Text(
+              value,
+              style: const TextStyle(color: AppColors.textSecondary),
+            ),
+          ),
         ],
       ),
     );
   }
 
+  String _formatDate(String? date) {
+    if (date == null || date.isEmpty) {
+      return '-';
+    }
+    try {
+      final parsed = DateTime.parse(date);
+      return DateFormat('yyyy-MM-dd HH:mm').format(parsed);
+    } catch (_) {
+      return date;
+    }
+  }
+
   @override
   PreferredSizeWidget? renderAppBar(BuildContext context, WidgetRef ref) {
-    return AppBar(title: const Text('디테일 정보'));
+    return AppBar(
+      backgroundColor: AppColors.primary,
+      title: const Text(
+        FlightDetailScreenStringConstant.appBarTitle,
+        style: TextStyle(color: AppColors.onPrimary),
+      ),
+      iconTheme: const IconThemeData(color: AppColors.onPrimary),
+    );
   }
+
+  @override
+  bool get resizeToAvoidBottomInset => false;
 }

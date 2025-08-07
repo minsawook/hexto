@@ -8,11 +8,42 @@ class _FlightListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: Text('${item.airline} ${item.flightId}'),
-      subtitle: Text('Scheduled: ${item.scheduleDateTime}'),
-      trailing: const Icon(Icons.chevron_right),
-      onTap: onTap,
+    return Card(
+      color: AppColors.surface,
+      margin: const EdgeInsets.symmetric(vertical: 4),
+      child: InkWell(
+        onTap: onTap,
+        child: Padding(
+          padding: const EdgeInsets.all(12),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '${HomeScreenStringConstant.airlineLabel}: ${item.airline}',
+                style: const TextStyle(
+                  color: AppColors.textPrimary,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 4),
+              Text(
+                '${HomeScreenStringConstant.flightIdTitle}: ${item.flightId}',
+                style: const TextStyle(color: AppColors.textSecondary),
+              ),
+              const SizedBox(height: 4),
+              const Text(
+                '${HomeScreenStringConstant.departureLabel}: ${HomeScreenStringConstant.inchone}',
+                style: TextStyle(color: AppColors.textSecondary),
+              ),
+              const SizedBox(height: 4),
+              Text(
+                '${HomeScreenStringConstant.arrivalLabel}: ${item.airport ?? '-'}',
+                style: const TextStyle(color: AppColors.textSecondary),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

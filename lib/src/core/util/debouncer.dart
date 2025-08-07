@@ -5,7 +5,7 @@ import 'dart:ui';
 class Debouncer {
   Debouncer();
 
-  final Duration delay = const Duration(milliseconds: 300);
+  final Duration delay = const Duration(milliseconds: 700);
   Timer? _timer;
 
   void call(VoidCallback action) {
