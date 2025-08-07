@@ -27,9 +27,11 @@ class FlightDetailScreen extends BaseScreen {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              _buildRow(FlightDetailScreenStringConstant.airline, flight.airline),
+              _buildRow(
+                  FlightDetailScreenStringConstant.airline, flight.airline),
               const Divider(),
-              _buildRow(FlightDetailScreenStringConstant.flightId, flight.flightId),
+              _buildRow(
+                  FlightDetailScreenStringConstant.flightId, flight.flightId),
               const Divider(),
               _buildRow(
                 FlightDetailScreenStringConstant.schedule,
@@ -41,11 +43,14 @@ class FlightDetailScreen extends BaseScreen {
                 _formatDate(flight.estimatedDateTime),
               ),
               const Divider(),
-              _buildRow(FlightDetailScreenStringConstant.airport, flight.airport ?? ''),
+              _buildRow(FlightDetailScreenStringConstant.airport,
+                  flight.airport ?? ''),
               const Divider(),
-              _buildRow(FlightDetailScreenStringConstant.gate, flight.gatenumber ?? ''),
+              _buildRow(FlightDetailScreenStringConstant.gate,
+                  flight.gatenumber ?? ''),
               const Divider(),
-              _buildRow(FlightDetailScreenStringConstant.remark, flight.remark ?? ''),
+              _buildRow(
+                  FlightDetailScreenStringConstant.remark, flight.remark ?? ''),
             ],
           ),
         ),
@@ -103,4 +108,7 @@ class FlightDetailScreen extends BaseScreen {
       iconTheme: const IconThemeData(color: AppColors.onPrimary),
     );
   }
+
+  @override
+  bool get resizeToAvoidBottomInset => false;
 }
