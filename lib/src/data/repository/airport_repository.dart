@@ -18,7 +18,7 @@ class AirportRepository with ApiUtilMixin {
 
   final AirportDatasource airportDatasource;
 
-  Future<ArrivalResponseModel> fetchDepartureFlights({
+  Future<ArrivalResponseModel> getDepartureFlights({
     required String fromTime,
     required String toTime,
     String? airport,
