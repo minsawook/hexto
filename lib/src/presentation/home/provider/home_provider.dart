@@ -5,7 +5,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'home_provider.g.dart';
 
 @Riverpod(keepAlive: true)
-class AirportProvider extends _$AirportProvider {
+class Airport extends _$Airport {
   @override
   Future<AirportResponseModel> build() async {
     return await _fetchAirport();

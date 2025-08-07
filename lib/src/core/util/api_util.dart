@@ -10,7 +10,8 @@ mixin ApiUtilMixin {
       return await apiCall();
     } on DioException catch (e) {
       throw e.error ?? const UnknownException();
-    } catch (e) {
+    } catch (e, trace) {
+      print('msw $trace');
       logger.e('An unexpected non-Dio error occurred in repository: $e');
       throw const UnknownException();
     }

@@ -48,14 +48,14 @@ Map<String, dynamic> _$$HeaderModelImplToJson(_$HeaderModelImpl instance) =>
 _$AirportBodyModelImpl _$$AirportBodyModelImplFromJson(
         Map<String, dynamic> json) =>
     _$AirportBodyModelImpl(
-      items: AirportItemsModel.fromJson(json['items'] as Map<String, dynamic>),
-      totalCount: (json['totalCount'] as num).toInt(),
+      items: _itemsFromJson(json['items']),
+      totalCount: (json['totalCount'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$AirportBodyModelImplToJson(
         _$AirportBodyModelImpl instance) =>
     <String, dynamic>{
-      'items': instance.items,
+      'items': _itemsToJson(instance.items),
       'totalCount': instance.totalCount,
     };
 
@@ -79,19 +79,19 @@ _$AirportItemModelImpl _$$AirportItemModelImplFromJson(
       typeOfFlight: json['typeOfFlight'] as String,
       airline: json['airline'] as String,
       flightId: json['flightId'] as String,
-      scheduleDateTime: json['scheduleDateTime'] as String,
-      estimatedDateTime: json['estimatedDateTime'] as String,
-      airport: json['airport'] as String,
-      gatenumber: json['gatenumber'] as String,
-      carousel: json['carousel'] as String,
-      cityCode: json['cityCode'] as String,
-      exitnumber: json['exitnumber'] as String,
-      remark: json['remark'] as String,
-      airportCode: json['airportCode'] as String,
-      terminalId: json['terminalId'] as String,
-      elapsetime: json['elapsetime'] as String,
-      codeshare: json['codeshare'] as String,
-      masterflightid: json['masterflightid'] as String,
+      scheduleDateTime: json['scheduleDateTime'] as String?,
+      estimatedDateTime: json['estimatedDateTime'] as String?,
+      airport: json['airport'] as String?,
+      gatenumber: json['gatenumber'] as String?,
+      carousel: json['carousel'] as String?,
+      cityCode: json['cityCode'] as String?,
+      exitnumber: json['exitnumber'] as String?,
+      remark: json['remark'] as String?,
+      airportCode: json['airportCode'] as String?,
+      terminalId: json['terminalId'] as String?,
+      elapsetime: json['elapsetime'] as String?,
+      codeshare: json['codeshare'] as String?,
+      masterflightid: json['masterflightid'] as String?,
     );
 
 Map<String, dynamic> _$$AirportItemModelImplToJson(

@@ -561,8 +561,9 @@ AirportBodyModel _$AirportBodyModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AirportBodyModel {
+  @JsonKey(fromJson: _itemsFromJson, toJson: _itemsToJson)
   AirportItemsModel get items => throw _privateConstructorUsedError;
-  int get totalCount => throw _privateConstructorUsedError;
+  int? get totalCount => throw _privateConstructorUsedError;
 
   /// Serializes this AirportBodyModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -580,7 +581,10 @@ abstract class $AirportBodyModelCopyWith<$Res> {
           AirportBodyModel value, $Res Function(AirportBodyModel) then) =
       _$AirportBodyModelCopyWithImpl<$Res, AirportBodyModel>;
   @useResult
-  $Res call({AirportItemsModel items, int totalCount});
+  $Res call(
+      {@JsonKey(fromJson: _itemsFromJson, toJson: _itemsToJson)
+      AirportItemsModel items,
+      int? totalCount});
 
   $AirportItemsModelCopyWith<$Res> get items;
 }
@@ -601,17 +605,17 @@ class _$AirportBodyModelCopyWithImpl<$Res, $Val extends AirportBodyModel>
   @override
   $Res call({
     Object? items = null,
-    Object? totalCount = null,
+    Object? totalCount = freezed,
   }) {
     return _then(_value.copyWith(
       items: null == items
           ? _value.items
           : items // ignore: cast_nullable_to_non_nullable
               as AirportItemsModel,
-      totalCount: null == totalCount
+      totalCount: freezed == totalCount
           ? _value.totalCount
           : totalCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ) as $Val);
   }
 
@@ -634,7 +638,10 @@ abstract class _$$AirportBodyModelImplCopyWith<$Res>
       __$$AirportBodyModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({AirportItemsModel items, int totalCount});
+  $Res call(
+      {@JsonKey(fromJson: _itemsFromJson, toJson: _itemsToJson)
+      AirportItemsModel items,
+      int? totalCount});
 
   @override
   $AirportItemsModelCopyWith<$Res> get items;
@@ -654,17 +661,17 @@ class __$$AirportBodyModelImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? items = null,
-    Object? totalCount = null,
+    Object? totalCount = freezed,
   }) {
     return _then(_$AirportBodyModelImpl(
       items: null == items
           ? _value.items
           : items // ignore: cast_nullable_to_non_nullable
               as AirportItemsModel,
-      totalCount: null == totalCount
+      totalCount: freezed == totalCount
           ? _value.totalCount
           : totalCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ));
   }
 }
@@ -672,15 +679,19 @@ class __$$AirportBodyModelImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$AirportBodyModelImpl implements _AirportBodyModel {
-  const _$AirportBodyModelImpl({required this.items, required this.totalCount});
+  const _$AirportBodyModelImpl(
+      {@JsonKey(fromJson: _itemsFromJson, toJson: _itemsToJson)
+      required this.items,
+      required this.totalCount});
 
   factory _$AirportBodyModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$AirportBodyModelImplFromJson(json);
 
   @override
+  @JsonKey(fromJson: _itemsFromJson, toJson: _itemsToJson)
   final AirportItemsModel items;
   @override
-  final int totalCount;
+  final int? totalCount;
 
   @override
   String toString() {
@@ -720,16 +731,18 @@ class _$AirportBodyModelImpl implements _AirportBodyModel {
 
 abstract class _AirportBodyModel implements AirportBodyModel {
   const factory _AirportBodyModel(
-      {required final AirportItemsModel items,
-      required final int totalCount}) = _$AirportBodyModelImpl;
+      {@JsonKey(fromJson: _itemsFromJson, toJson: _itemsToJson)
+      required final AirportItemsModel items,
+      required final int? totalCount}) = _$AirportBodyModelImpl;
 
   factory _AirportBodyModel.fromJson(Map<String, dynamic> json) =
       _$AirportBodyModelImpl.fromJson;
 
   @override
+  @JsonKey(fromJson: _itemsFromJson, toJson: _itemsToJson)
   AirportItemsModel get items;
   @override
-  int get totalCount;
+  int? get totalCount;
 
   /// Create a copy of AirportBodyModel
   /// with the given fields replaced by the non-null parameter values.
@@ -906,19 +919,19 @@ mixin _$AirportItemModel {
   String get typeOfFlight => throw _privateConstructorUsedError;
   String get airline => throw _privateConstructorUsedError;
   String get flightId => throw _privateConstructorUsedError;
-  String get scheduleDateTime => throw _privateConstructorUsedError;
-  String get estimatedDateTime => throw _privateConstructorUsedError;
-  String get airport => throw _privateConstructorUsedError;
-  String get gatenumber => throw _privateConstructorUsedError;
-  String get carousel => throw _privateConstructorUsedError;
-  String get cityCode => throw _privateConstructorUsedError;
-  String get exitnumber => throw _privateConstructorUsedError;
-  String get remark => throw _privateConstructorUsedError;
-  String get airportCode => throw _privateConstructorUsedError;
-  String get terminalId => throw _privateConstructorUsedError;
-  String get elapsetime => throw _privateConstructorUsedError;
-  String get codeshare => throw _privateConstructorUsedError;
-  String get masterflightid => throw _privateConstructorUsedError;
+  String? get scheduleDateTime => throw _privateConstructorUsedError;
+  String? get estimatedDateTime => throw _privateConstructorUsedError;
+  String? get airport => throw _privateConstructorUsedError;
+  String? get gatenumber => throw _privateConstructorUsedError;
+  String? get carousel => throw _privateConstructorUsedError;
+  String? get cityCode => throw _privateConstructorUsedError;
+  String? get exitnumber => throw _privateConstructorUsedError;
+  String? get remark => throw _privateConstructorUsedError;
+  String? get airportCode => throw _privateConstructorUsedError;
+  String? get terminalId => throw _privateConstructorUsedError;
+  String? get elapsetime => throw _privateConstructorUsedError;
+  String? get codeshare => throw _privateConstructorUsedError;
+  String? get masterflightid => throw _privateConstructorUsedError;
 
   /// Serializes this AirportItemModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -940,19 +953,19 @@ abstract class $AirportItemModelCopyWith<$Res> {
       {String typeOfFlight,
       String airline,
       String flightId,
-      String scheduleDateTime,
-      String estimatedDateTime,
-      String airport,
-      String gatenumber,
-      String carousel,
-      String cityCode,
-      String exitnumber,
-      String remark,
-      String airportCode,
-      String terminalId,
-      String elapsetime,
-      String codeshare,
-      String masterflightid});
+      String? scheduleDateTime,
+      String? estimatedDateTime,
+      String? airport,
+      String? gatenumber,
+      String? carousel,
+      String? cityCode,
+      String? exitnumber,
+      String? remark,
+      String? airportCode,
+      String? terminalId,
+      String? elapsetime,
+      String? codeshare,
+      String? masterflightid});
 }
 
 /// @nodoc
@@ -973,19 +986,19 @@ class _$AirportItemModelCopyWithImpl<$Res, $Val extends AirportItemModel>
     Object? typeOfFlight = null,
     Object? airline = null,
     Object? flightId = null,
-    Object? scheduleDateTime = null,
-    Object? estimatedDateTime = null,
-    Object? airport = null,
-    Object? gatenumber = null,
-    Object? carousel = null,
-    Object? cityCode = null,
-    Object? exitnumber = null,
-    Object? remark = null,
-    Object? airportCode = null,
-    Object? terminalId = null,
-    Object? elapsetime = null,
-    Object? codeshare = null,
-    Object? masterflightid = null,
+    Object? scheduleDateTime = freezed,
+    Object? estimatedDateTime = freezed,
+    Object? airport = freezed,
+    Object? gatenumber = freezed,
+    Object? carousel = freezed,
+    Object? cityCode = freezed,
+    Object? exitnumber = freezed,
+    Object? remark = freezed,
+    Object? airportCode = freezed,
+    Object? terminalId = freezed,
+    Object? elapsetime = freezed,
+    Object? codeshare = freezed,
+    Object? masterflightid = freezed,
   }) {
     return _then(_value.copyWith(
       typeOfFlight: null == typeOfFlight
@@ -1000,58 +1013,58 @@ class _$AirportItemModelCopyWithImpl<$Res, $Val extends AirportItemModel>
           ? _value.flightId
           : flightId // ignore: cast_nullable_to_non_nullable
               as String,
-      scheduleDateTime: null == scheduleDateTime
+      scheduleDateTime: freezed == scheduleDateTime
           ? _value.scheduleDateTime
           : scheduleDateTime // ignore: cast_nullable_to_non_nullable
-              as String,
-      estimatedDateTime: null == estimatedDateTime
+              as String?,
+      estimatedDateTime: freezed == estimatedDateTime
           ? _value.estimatedDateTime
           : estimatedDateTime // ignore: cast_nullable_to_non_nullable
-              as String,
-      airport: null == airport
+              as String?,
+      airport: freezed == airport
           ? _value.airport
           : airport // ignore: cast_nullable_to_non_nullable
-              as String,
-      gatenumber: null == gatenumber
+              as String?,
+      gatenumber: freezed == gatenumber
           ? _value.gatenumber
           : gatenumber // ignore: cast_nullable_to_non_nullable
-              as String,
-      carousel: null == carousel
+              as String?,
+      carousel: freezed == carousel
           ? _value.carousel
           : carousel // ignore: cast_nullable_to_non_nullable
-              as String,
-      cityCode: null == cityCode
+              as String?,
+      cityCode: freezed == cityCode
           ? _value.cityCode
           : cityCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      exitnumber: null == exitnumber
+              as String?,
+      exitnumber: freezed == exitnumber
           ? _value.exitnumber
           : exitnumber // ignore: cast_nullable_to_non_nullable
-              as String,
-      remark: null == remark
+              as String?,
+      remark: freezed == remark
           ? _value.remark
           : remark // ignore: cast_nullable_to_non_nullable
-              as String,
-      airportCode: null == airportCode
+              as String?,
+      airportCode: freezed == airportCode
           ? _value.airportCode
           : airportCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      terminalId: null == terminalId
+              as String?,
+      terminalId: freezed == terminalId
           ? _value.terminalId
           : terminalId // ignore: cast_nullable_to_non_nullable
-              as String,
-      elapsetime: null == elapsetime
+              as String?,
+      elapsetime: freezed == elapsetime
           ? _value.elapsetime
           : elapsetime // ignore: cast_nullable_to_non_nullable
-              as String,
-      codeshare: null == codeshare
+              as String?,
+      codeshare: freezed == codeshare
           ? _value.codeshare
           : codeshare // ignore: cast_nullable_to_non_nullable
-              as String,
-      masterflightid: null == masterflightid
+              as String?,
+      masterflightid: freezed == masterflightid
           ? _value.masterflightid
           : masterflightid // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -1068,19 +1081,19 @@ abstract class _$$AirportItemModelImplCopyWith<$Res>
       {String typeOfFlight,
       String airline,
       String flightId,
-      String scheduleDateTime,
-      String estimatedDateTime,
-      String airport,
-      String gatenumber,
-      String carousel,
-      String cityCode,
-      String exitnumber,
-      String remark,
-      String airportCode,
-      String terminalId,
-      String elapsetime,
-      String codeshare,
-      String masterflightid});
+      String? scheduleDateTime,
+      String? estimatedDateTime,
+      String? airport,
+      String? gatenumber,
+      String? carousel,
+      String? cityCode,
+      String? exitnumber,
+      String? remark,
+      String? airportCode,
+      String? terminalId,
+      String? elapsetime,
+      String? codeshare,
+      String? masterflightid});
 }
 
 /// @nodoc
@@ -1099,19 +1112,19 @@ class __$$AirportItemModelImplCopyWithImpl<$Res>
     Object? typeOfFlight = null,
     Object? airline = null,
     Object? flightId = null,
-    Object? scheduleDateTime = null,
-    Object? estimatedDateTime = null,
-    Object? airport = null,
-    Object? gatenumber = null,
-    Object? carousel = null,
-    Object? cityCode = null,
-    Object? exitnumber = null,
-    Object? remark = null,
-    Object? airportCode = null,
-    Object? terminalId = null,
-    Object? elapsetime = null,
-    Object? codeshare = null,
-    Object? masterflightid = null,
+    Object? scheduleDateTime = freezed,
+    Object? estimatedDateTime = freezed,
+    Object? airport = freezed,
+    Object? gatenumber = freezed,
+    Object? carousel = freezed,
+    Object? cityCode = freezed,
+    Object? exitnumber = freezed,
+    Object? remark = freezed,
+    Object? airportCode = freezed,
+    Object? terminalId = freezed,
+    Object? elapsetime = freezed,
+    Object? codeshare = freezed,
+    Object? masterflightid = freezed,
   }) {
     return _then(_$AirportItemModelImpl(
       typeOfFlight: null == typeOfFlight
@@ -1126,58 +1139,58 @@ class __$$AirportItemModelImplCopyWithImpl<$Res>
           ? _value.flightId
           : flightId // ignore: cast_nullable_to_non_nullable
               as String,
-      scheduleDateTime: null == scheduleDateTime
+      scheduleDateTime: freezed == scheduleDateTime
           ? _value.scheduleDateTime
           : scheduleDateTime // ignore: cast_nullable_to_non_nullable
-              as String,
-      estimatedDateTime: null == estimatedDateTime
+              as String?,
+      estimatedDateTime: freezed == estimatedDateTime
           ? _value.estimatedDateTime
           : estimatedDateTime // ignore: cast_nullable_to_non_nullable
-              as String,
-      airport: null == airport
+              as String?,
+      airport: freezed == airport
           ? _value.airport
           : airport // ignore: cast_nullable_to_non_nullable
-              as String,
-      gatenumber: null == gatenumber
+              as String?,
+      gatenumber: freezed == gatenumber
           ? _value.gatenumber
           : gatenumber // ignore: cast_nullable_to_non_nullable
-              as String,
-      carousel: null == carousel
+              as String?,
+      carousel: freezed == carousel
           ? _value.carousel
           : carousel // ignore: cast_nullable_to_non_nullable
-              as String,
-      cityCode: null == cityCode
+              as String?,
+      cityCode: freezed == cityCode
           ? _value.cityCode
           : cityCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      exitnumber: null == exitnumber
+              as String?,
+      exitnumber: freezed == exitnumber
           ? _value.exitnumber
           : exitnumber // ignore: cast_nullable_to_non_nullable
-              as String,
-      remark: null == remark
+              as String?,
+      remark: freezed == remark
           ? _value.remark
           : remark // ignore: cast_nullable_to_non_nullable
-              as String,
-      airportCode: null == airportCode
+              as String?,
+      airportCode: freezed == airportCode
           ? _value.airportCode
           : airportCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      terminalId: null == terminalId
+              as String?,
+      terminalId: freezed == terminalId
           ? _value.terminalId
           : terminalId // ignore: cast_nullable_to_non_nullable
-              as String,
-      elapsetime: null == elapsetime
+              as String?,
+      elapsetime: freezed == elapsetime
           ? _value.elapsetime
           : elapsetime // ignore: cast_nullable_to_non_nullable
-              as String,
-      codeshare: null == codeshare
+              as String?,
+      codeshare: freezed == codeshare
           ? _value.codeshare
           : codeshare // ignore: cast_nullable_to_non_nullable
-              as String,
-      masterflightid: null == masterflightid
+              as String?,
+      masterflightid: freezed == masterflightid
           ? _value.masterflightid
           : masterflightid // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -1213,31 +1226,31 @@ class _$AirportItemModelImpl implements _AirportItemModel {
   @override
   final String flightId;
   @override
-  final String scheduleDateTime;
+  final String? scheduleDateTime;
   @override
-  final String estimatedDateTime;
+  final String? estimatedDateTime;
   @override
-  final String airport;
+  final String? airport;
   @override
-  final String gatenumber;
+  final String? gatenumber;
   @override
-  final String carousel;
+  final String? carousel;
   @override
-  final String cityCode;
+  final String? cityCode;
   @override
-  final String exitnumber;
+  final String? exitnumber;
   @override
-  final String remark;
+  final String? remark;
   @override
-  final String airportCode;
+  final String? airportCode;
   @override
-  final String terminalId;
+  final String? terminalId;
   @override
-  final String elapsetime;
+  final String? elapsetime;
   @override
-  final String codeshare;
+  final String? codeshare;
   @override
-  final String masterflightid;
+  final String? masterflightid;
 
   @override
   String toString() {
@@ -1323,19 +1336,19 @@ abstract class _AirportItemModel implements AirportItemModel {
       {required final String typeOfFlight,
       required final String airline,
       required final String flightId,
-      required final String scheduleDateTime,
-      required final String estimatedDateTime,
-      required final String airport,
-      required final String gatenumber,
-      required final String carousel,
-      required final String cityCode,
-      required final String exitnumber,
-      required final String remark,
-      required final String airportCode,
-      required final String terminalId,
-      required final String elapsetime,
-      required final String codeshare,
-      required final String masterflightid}) = _$AirportItemModelImpl;
+      required final String? scheduleDateTime,
+      required final String? estimatedDateTime,
+      required final String? airport,
+      required final String? gatenumber,
+      required final String? carousel,
+      required final String? cityCode,
+      required final String? exitnumber,
+      required final String? remark,
+      required final String? airportCode,
+      required final String? terminalId,
+      required final String? elapsetime,
+      required final String? codeshare,
+      required final String? masterflightid}) = _$AirportItemModelImpl;
 
   factory _AirportItemModel.fromJson(Map<String, dynamic> json) =
       _$AirportItemModelImpl.fromJson;
@@ -1347,31 +1360,31 @@ abstract class _AirportItemModel implements AirportItemModel {
   @override
   String get flightId;
   @override
-  String get scheduleDateTime;
+  String? get scheduleDateTime;
   @override
-  String get estimatedDateTime;
+  String? get estimatedDateTime;
   @override
-  String get airport;
+  String? get airport;
   @override
-  String get gatenumber;
+  String? get gatenumber;
   @override
-  String get carousel;
+  String? get carousel;
   @override
-  String get cityCode;
+  String? get cityCode;
   @override
-  String get exitnumber;
+  String? get exitnumber;
   @override
-  String get remark;
+  String? get remark;
   @override
-  String get airportCode;
+  String? get airportCode;
   @override
-  String get terminalId;
+  String? get terminalId;
   @override
-  String get elapsetime;
+  String? get elapsetime;
   @override
-  String get codeshare;
+  String? get codeshare;
   @override
-  String get masterflightid;
+  String? get masterflightid;
 
   /// Create a copy of AirportItemModel
   /// with the given fields replaced by the non-null parameter values.

@@ -6,21 +6,20 @@ part of 'home_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$airportProviderHash() => r'c6a1cd9c9d7030c060bb994ba7eead8e215650b0';
+String _$airportHash() => r'e0c527a20218f8e5a930a4fa4a41e1f4853ddb29';
 
-/// See also [AirportProvider].
-@ProviderFor(AirportProvider)
-final airportProviderProvider =
-    AsyncNotifierProvider<AirportProvider, AirportResponseModel>.internal(
-  AirportProvider.new,
-  name: r'airportProviderProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$airportProviderHash,
+/// See also [Airport].
+@ProviderFor(Airport)
+final airportProvider =
+    AsyncNotifierProvider<Airport, AirportResponseModel>.internal(
+  Airport.new,
+  name: r'airportProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$airportHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$AirportProvider = AsyncNotifier<AirportResponseModel>;
+typedef _$Airport = AsyncNotifier<AirportResponseModel>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

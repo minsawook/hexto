@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:hexto/src/presentation/home/flight_detail_screen.dart';
 import 'package:hexto/src/presentation/home/home_screen.dart';
 import 'package:hexto/src/router/router_observer.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+import '../data/model/airport_response_model.dart';
 
 part 'router.g.dart';
 
@@ -23,6 +26,14 @@ GoRouter router(Ref ref) {
         name: HomeScreen.route,
         builder: (BuildContext context, GoRouterState state) {
           return const HomeScreen();
+        },
+      ),
+      GoRoute(
+        path: '/${FlightDetailScreen.route}',
+        name: FlightDetailScreen.route,
+        builder: (BuildContext context, GoRouterState state) {
+          final flight = state.extra as AirportItemModel;
+          return FlightDetailScreen(flight: flight);
         },
       ),
     ],
