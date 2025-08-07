@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'arrival_response_model.dart';
+part of 'airport_response_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,47 +14,47 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-ArrivalResponseModel _$ArrivalResponseModelFromJson(Map<String, dynamic> json) {
-  return _ArrivalResponseModel.fromJson(json);
+AirportResponseModel _$AirportResponseModelFromJson(Map<String, dynamic> json) {
+  return _AirportResponseModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$ArrivalResponseModel {
-  ArrivalResponseBodyModel get response => throw _privateConstructorUsedError;
+mixin _$AirportResponseModel {
+  AirportResponseBodyModel get response => throw _privateConstructorUsedError;
 
-  /// Serializes this ArrivalResponseModel to a JSON map.
+  /// Serializes this AirportResponseModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-  /// Create a copy of ArrivalResponseModel
+  /// Create a copy of AirportResponseModel
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ArrivalResponseModelCopyWith<ArrivalResponseModel> get copyWith =>
+  $AirportResponseModelCopyWith<AirportResponseModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ArrivalResponseModelCopyWith<$Res> {
-  factory $ArrivalResponseModelCopyWith(ArrivalResponseModel value,
-          $Res Function(ArrivalResponseModel) then) =
-      _$ArrivalResponseModelCopyWithImpl<$Res, ArrivalResponseModel>;
+abstract class $AirportResponseModelCopyWith<$Res> {
+  factory $AirportResponseModelCopyWith(AirportResponseModel value,
+          $Res Function(AirportResponseModel) then) =
+      _$AirportResponseModelCopyWithImpl<$Res, AirportResponseModel>;
   @useResult
-  $Res call({ArrivalResponseBodyModel response});
+  $Res call({AirportResponseBodyModel response});
 
-  $ArrivalResponseBodyModelCopyWith<$Res> get response;
+  $AirportResponseBodyModelCopyWith<$Res> get response;
 }
 
 /// @nodoc
-class _$ArrivalResponseModelCopyWithImpl<$Res,
-        $Val extends ArrivalResponseModel>
-    implements $ArrivalResponseModelCopyWith<$Res> {
-  _$ArrivalResponseModelCopyWithImpl(this._value, this._then);
+class _$AirportResponseModelCopyWithImpl<$Res,
+        $Val extends AirportResponseModel>
+    implements $AirportResponseModelCopyWith<$Res> {
+  _$AirportResponseModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ArrivalResponseModel
+  /// Create a copy of AirportResponseModel
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -65,80 +65,80 @@ class _$ArrivalResponseModelCopyWithImpl<$Res,
       response: null == response
           ? _value.response
           : response // ignore: cast_nullable_to_non_nullable
-              as ArrivalResponseBodyModel,
+              as AirportResponseBodyModel,
     ) as $Val);
   }
 
-  /// Create a copy of ArrivalResponseModel
+  /// Create a copy of AirportResponseModel
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $ArrivalResponseBodyModelCopyWith<$Res> get response {
-    return $ArrivalResponseBodyModelCopyWith<$Res>(_value.response, (value) {
+  $AirportResponseBodyModelCopyWith<$Res> get response {
+    return $AirportResponseBodyModelCopyWith<$Res>(_value.response, (value) {
       return _then(_value.copyWith(response: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$ArrivalResponseModelImplCopyWith<$Res>
-    implements $ArrivalResponseModelCopyWith<$Res> {
-  factory _$$ArrivalResponseModelImplCopyWith(_$ArrivalResponseModelImpl value,
-          $Res Function(_$ArrivalResponseModelImpl) then) =
-      __$$ArrivalResponseModelImplCopyWithImpl<$Res>;
+abstract class _$$AirportResponseModelImplCopyWith<$Res>
+    implements $AirportResponseModelCopyWith<$Res> {
+  factory _$$AirportResponseModelImplCopyWith(_$AirportResponseModelImpl value,
+          $Res Function(_$AirportResponseModelImpl) then) =
+      __$$AirportResponseModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({ArrivalResponseBodyModel response});
+  $Res call({AirportResponseBodyModel response});
 
   @override
-  $ArrivalResponseBodyModelCopyWith<$Res> get response;
+  $AirportResponseBodyModelCopyWith<$Res> get response;
 }
 
 /// @nodoc
-class __$$ArrivalResponseModelImplCopyWithImpl<$Res>
-    extends _$ArrivalResponseModelCopyWithImpl<$Res, _$ArrivalResponseModelImpl>
-    implements _$$ArrivalResponseModelImplCopyWith<$Res> {
-  __$$ArrivalResponseModelImplCopyWithImpl(_$ArrivalResponseModelImpl _value,
-      $Res Function(_$ArrivalResponseModelImpl) _then)
+class __$$AirportResponseModelImplCopyWithImpl<$Res>
+    extends _$AirportResponseModelCopyWithImpl<$Res, _$AirportResponseModelImpl>
+    implements _$$AirportResponseModelImplCopyWith<$Res> {
+  __$$AirportResponseModelImplCopyWithImpl(_$AirportResponseModelImpl _value,
+      $Res Function(_$AirportResponseModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ArrivalResponseModel
+  /// Create a copy of AirportResponseModel
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? response = null,
   }) {
-    return _then(_$ArrivalResponseModelImpl(
+    return _then(_$AirportResponseModelImpl(
       response: null == response
           ? _value.response
           : response // ignore: cast_nullable_to_non_nullable
-              as ArrivalResponseBodyModel,
+              as AirportResponseBodyModel,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$ArrivalResponseModelImpl implements _ArrivalResponseModel {
-  const _$ArrivalResponseModelImpl({required this.response});
+class _$AirportResponseModelImpl implements _AirportResponseModel {
+  const _$AirportResponseModelImpl({required this.response});
 
-  factory _$ArrivalResponseModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ArrivalResponseModelImplFromJson(json);
+  factory _$AirportResponseModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AirportResponseModelImplFromJson(json);
 
   @override
-  final ArrivalResponseBodyModel response;
+  final AirportResponseBodyModel response;
 
   @override
   String toString() {
-    return 'ArrivalResponseModel(response: $response)';
+    return 'AirportResponseModel(response: $response)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ArrivalResponseModelImpl &&
+            other is _$AirportResponseModelImpl &&
             (identical(other.response, response) ||
                 other.response == response));
   }
@@ -147,87 +147,87 @@ class _$ArrivalResponseModelImpl implements _ArrivalResponseModel {
   @override
   int get hashCode => Object.hash(runtimeType, response);
 
-  /// Create a copy of ArrivalResponseModel
+  /// Create a copy of AirportResponseModel
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ArrivalResponseModelImplCopyWith<_$ArrivalResponseModelImpl>
+  _$$AirportResponseModelImplCopyWith<_$AirportResponseModelImpl>
       get copyWith =>
-          __$$ArrivalResponseModelImplCopyWithImpl<_$ArrivalResponseModelImpl>(
+          __$$AirportResponseModelImplCopyWithImpl<_$AirportResponseModelImpl>(
               this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ArrivalResponseModelImplToJson(
+    return _$$AirportResponseModelImplToJson(
       this,
     );
   }
 }
 
-abstract class _ArrivalResponseModel implements ArrivalResponseModel {
-  const factory _ArrivalResponseModel(
-          {required final ArrivalResponseBodyModel response}) =
-      _$ArrivalResponseModelImpl;
+abstract class _AirportResponseModel implements AirportResponseModel {
+  const factory _AirportResponseModel(
+          {required final AirportResponseBodyModel response}) =
+      _$AirportResponseModelImpl;
 
-  factory _ArrivalResponseModel.fromJson(Map<String, dynamic> json) =
-      _$ArrivalResponseModelImpl.fromJson;
+  factory _AirportResponseModel.fromJson(Map<String, dynamic> json) =
+      _$AirportResponseModelImpl.fromJson;
 
   @override
-  ArrivalResponseBodyModel get response;
+  AirportResponseBodyModel get response;
 
-  /// Create a copy of ArrivalResponseModel
+  /// Create a copy of AirportResponseModel
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ArrivalResponseModelImplCopyWith<_$ArrivalResponseModelImpl>
+  _$$AirportResponseModelImplCopyWith<_$AirportResponseModelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
-ArrivalResponseBodyModel _$ArrivalResponseBodyModelFromJson(
+AirportResponseBodyModel _$AirportResponseBodyModelFromJson(
     Map<String, dynamic> json) {
-  return _ArrivalResponseBodyModel.fromJson(json);
+  return _AirportResponseBodyModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$ArrivalResponseBodyModel {
+mixin _$AirportResponseBodyModel {
   HeaderModel get header => throw _privateConstructorUsedError;
-  ArrivalBodyModel get body => throw _privateConstructorUsedError;
+  AirportBodyModel get body => throw _privateConstructorUsedError;
 
-  /// Serializes this ArrivalResponseBodyModel to a JSON map.
+  /// Serializes this AirportResponseBodyModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-  /// Create a copy of ArrivalResponseBodyModel
+  /// Create a copy of AirportResponseBodyModel
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ArrivalResponseBodyModelCopyWith<ArrivalResponseBodyModel> get copyWith =>
+  $AirportResponseBodyModelCopyWith<AirportResponseBodyModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ArrivalResponseBodyModelCopyWith<$Res> {
-  factory $ArrivalResponseBodyModelCopyWith(ArrivalResponseBodyModel value,
-          $Res Function(ArrivalResponseBodyModel) then) =
-      _$ArrivalResponseBodyModelCopyWithImpl<$Res, ArrivalResponseBodyModel>;
+abstract class $AirportResponseBodyModelCopyWith<$Res> {
+  factory $AirportResponseBodyModelCopyWith(AirportResponseBodyModel value,
+          $Res Function(AirportResponseBodyModel) then) =
+      _$AirportResponseBodyModelCopyWithImpl<$Res, AirportResponseBodyModel>;
   @useResult
-  $Res call({HeaderModel header, ArrivalBodyModel body});
+  $Res call({HeaderModel header, AirportBodyModel body});
 
   $HeaderModelCopyWith<$Res> get header;
-  $ArrivalBodyModelCopyWith<$Res> get body;
+  $AirportBodyModelCopyWith<$Res> get body;
 }
 
 /// @nodoc
-class _$ArrivalResponseBodyModelCopyWithImpl<$Res,
-        $Val extends ArrivalResponseBodyModel>
-    implements $ArrivalResponseBodyModelCopyWith<$Res> {
-  _$ArrivalResponseBodyModelCopyWithImpl(this._value, this._then);
+class _$AirportResponseBodyModelCopyWithImpl<$Res,
+        $Val extends AirportResponseBodyModel>
+    implements $AirportResponseBodyModelCopyWith<$Res> {
+  _$AirportResponseBodyModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ArrivalResponseBodyModel
+  /// Create a copy of AirportResponseBodyModel
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -243,11 +243,11 @@ class _$ArrivalResponseBodyModelCopyWithImpl<$Res,
       body: null == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
-              as ArrivalBodyModel,
+              as AirportBodyModel,
     ) as $Val);
   }
 
-  /// Create a copy of ArrivalResponseBodyModel
+  /// Create a copy of AirportResponseBodyModel
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
@@ -257,45 +257,45 @@ class _$ArrivalResponseBodyModelCopyWithImpl<$Res,
     });
   }
 
-  /// Create a copy of ArrivalResponseBodyModel
+  /// Create a copy of AirportResponseBodyModel
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $ArrivalBodyModelCopyWith<$Res> get body {
-    return $ArrivalBodyModelCopyWith<$Res>(_value.body, (value) {
+  $AirportBodyModelCopyWith<$Res> get body {
+    return $AirportBodyModelCopyWith<$Res>(_value.body, (value) {
       return _then(_value.copyWith(body: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$ArrivalResponseBodyModelImplCopyWith<$Res>
-    implements $ArrivalResponseBodyModelCopyWith<$Res> {
-  factory _$$ArrivalResponseBodyModelImplCopyWith(
-          _$ArrivalResponseBodyModelImpl value,
-          $Res Function(_$ArrivalResponseBodyModelImpl) then) =
-      __$$ArrivalResponseBodyModelImplCopyWithImpl<$Res>;
+abstract class _$$AirportResponseBodyModelImplCopyWith<$Res>
+    implements $AirportResponseBodyModelCopyWith<$Res> {
+  factory _$$AirportResponseBodyModelImplCopyWith(
+          _$AirportResponseBodyModelImpl value,
+          $Res Function(_$AirportResponseBodyModelImpl) then) =
+      __$$AirportResponseBodyModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({HeaderModel header, ArrivalBodyModel body});
+  $Res call({HeaderModel header, AirportBodyModel body});
 
   @override
   $HeaderModelCopyWith<$Res> get header;
   @override
-  $ArrivalBodyModelCopyWith<$Res> get body;
+  $AirportBodyModelCopyWith<$Res> get body;
 }
 
 /// @nodoc
-class __$$ArrivalResponseBodyModelImplCopyWithImpl<$Res>
-    extends _$ArrivalResponseBodyModelCopyWithImpl<$Res,
-        _$ArrivalResponseBodyModelImpl>
-    implements _$$ArrivalResponseBodyModelImplCopyWith<$Res> {
-  __$$ArrivalResponseBodyModelImplCopyWithImpl(
-      _$ArrivalResponseBodyModelImpl _value,
-      $Res Function(_$ArrivalResponseBodyModelImpl) _then)
+class __$$AirportResponseBodyModelImplCopyWithImpl<$Res>
+    extends _$AirportResponseBodyModelCopyWithImpl<$Res,
+        _$AirportResponseBodyModelImpl>
+    implements _$$AirportResponseBodyModelImplCopyWith<$Res> {
+  __$$AirportResponseBodyModelImplCopyWithImpl(
+      _$AirportResponseBodyModelImpl _value,
+      $Res Function(_$AirportResponseBodyModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ArrivalResponseBodyModel
+  /// Create a copy of AirportResponseBodyModel
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -303,7 +303,7 @@ class __$$ArrivalResponseBodyModelImplCopyWithImpl<$Res>
     Object? header = null,
     Object? body = null,
   }) {
-    return _then(_$ArrivalResponseBodyModelImpl(
+    return _then(_$AirportResponseBodyModelImpl(
       header: null == header
           ? _value.header
           : header // ignore: cast_nullable_to_non_nullable
@@ -311,35 +311,35 @@ class __$$ArrivalResponseBodyModelImplCopyWithImpl<$Res>
       body: null == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
-              as ArrivalBodyModel,
+              as AirportBodyModel,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$ArrivalResponseBodyModelImpl implements _ArrivalResponseBodyModel {
-  const _$ArrivalResponseBodyModelImpl(
+class _$AirportResponseBodyModelImpl implements _AirportResponseBodyModel {
+  const _$AirportResponseBodyModelImpl(
       {required this.header, required this.body});
 
-  factory _$ArrivalResponseBodyModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ArrivalResponseBodyModelImplFromJson(json);
+  factory _$AirportResponseBodyModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AirportResponseBodyModelImplFromJson(json);
 
   @override
   final HeaderModel header;
   @override
-  final ArrivalBodyModel body;
+  final AirportBodyModel body;
 
   @override
   String toString() {
-    return 'ArrivalResponseBodyModel(header: $header, body: $body)';
+    return 'AirportResponseBodyModel(header: $header, body: $body)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ArrivalResponseBodyModelImpl &&
+            other is _$AirportResponseBodyModelImpl &&
             (identical(other.header, header) || other.header == header) &&
             (identical(other.body, body) || other.body == body));
   }
@@ -348,41 +348,41 @@ class _$ArrivalResponseBodyModelImpl implements _ArrivalResponseBodyModel {
   @override
   int get hashCode => Object.hash(runtimeType, header, body);
 
-  /// Create a copy of ArrivalResponseBodyModel
+  /// Create a copy of AirportResponseBodyModel
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ArrivalResponseBodyModelImplCopyWith<_$ArrivalResponseBodyModelImpl>
-      get copyWith => __$$ArrivalResponseBodyModelImplCopyWithImpl<
-          _$ArrivalResponseBodyModelImpl>(this, _$identity);
+  _$$AirportResponseBodyModelImplCopyWith<_$AirportResponseBodyModelImpl>
+      get copyWith => __$$AirportResponseBodyModelImplCopyWithImpl<
+          _$AirportResponseBodyModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ArrivalResponseBodyModelImplToJson(
+    return _$$AirportResponseBodyModelImplToJson(
       this,
     );
   }
 }
 
-abstract class _ArrivalResponseBodyModel implements ArrivalResponseBodyModel {
-  const factory _ArrivalResponseBodyModel(
+abstract class _AirportResponseBodyModel implements AirportResponseBodyModel {
+  const factory _AirportResponseBodyModel(
       {required final HeaderModel header,
-      required final ArrivalBodyModel body}) = _$ArrivalResponseBodyModelImpl;
+      required final AirportBodyModel body}) = _$AirportResponseBodyModelImpl;
 
-  factory _ArrivalResponseBodyModel.fromJson(Map<String, dynamic> json) =
-      _$ArrivalResponseBodyModelImpl.fromJson;
+  factory _AirportResponseBodyModel.fromJson(Map<String, dynamic> json) =
+      _$AirportResponseBodyModelImpl.fromJson;
 
   @override
   HeaderModel get header;
   @override
-  ArrivalBodyModel get body;
+  AirportBodyModel get body;
 
-  /// Create a copy of ArrivalResponseBodyModel
+  /// Create a copy of AirportResponseBodyModel
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ArrivalResponseBodyModelImplCopyWith<_$ArrivalResponseBodyModelImpl>
+  _$$AirportResponseBodyModelImplCopyWith<_$AirportResponseBodyModelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -555,47 +555,47 @@ abstract class _HeaderModel implements HeaderModel {
       throw _privateConstructorUsedError;
 }
 
-ArrivalBodyModel _$ArrivalBodyModelFromJson(Map<String, dynamic> json) {
-  return _ArrivalBodyModel.fromJson(json);
+AirportBodyModel _$AirportBodyModelFromJson(Map<String, dynamic> json) {
+  return _AirportBodyModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$ArrivalBodyModel {
-  ArrivalItemsModel get items => throw _privateConstructorUsedError;
+mixin _$AirportBodyModel {
+  AirportItemsModel get items => throw _privateConstructorUsedError;
   int get totalCount => throw _privateConstructorUsedError;
 
-  /// Serializes this ArrivalBodyModel to a JSON map.
+  /// Serializes this AirportBodyModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-  /// Create a copy of ArrivalBodyModel
+  /// Create a copy of AirportBodyModel
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ArrivalBodyModelCopyWith<ArrivalBodyModel> get copyWith =>
+  $AirportBodyModelCopyWith<AirportBodyModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ArrivalBodyModelCopyWith<$Res> {
-  factory $ArrivalBodyModelCopyWith(
-          ArrivalBodyModel value, $Res Function(ArrivalBodyModel) then) =
-      _$ArrivalBodyModelCopyWithImpl<$Res, ArrivalBodyModel>;
+abstract class $AirportBodyModelCopyWith<$Res> {
+  factory $AirportBodyModelCopyWith(
+          AirportBodyModel value, $Res Function(AirportBodyModel) then) =
+      _$AirportBodyModelCopyWithImpl<$Res, AirportBodyModel>;
   @useResult
-  $Res call({ArrivalItemsModel items, int totalCount});
+  $Res call({AirportItemsModel items, int totalCount});
 
-  $ArrivalItemsModelCopyWith<$Res> get items;
+  $AirportItemsModelCopyWith<$Res> get items;
 }
 
 /// @nodoc
-class _$ArrivalBodyModelCopyWithImpl<$Res, $Val extends ArrivalBodyModel>
-    implements $ArrivalBodyModelCopyWith<$Res> {
-  _$ArrivalBodyModelCopyWithImpl(this._value, this._then);
+class _$AirportBodyModelCopyWithImpl<$Res, $Val extends AirportBodyModel>
+    implements $AirportBodyModelCopyWith<$Res> {
+  _$AirportBodyModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ArrivalBodyModel
+  /// Create a copy of AirportBodyModel
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -607,7 +607,7 @@ class _$ArrivalBodyModelCopyWithImpl<$Res, $Val extends ArrivalBodyModel>
       items: null == items
           ? _value.items
           : items // ignore: cast_nullable_to_non_nullable
-              as ArrivalItemsModel,
+              as AirportItemsModel,
       totalCount: null == totalCount
           ? _value.totalCount
           : totalCount // ignore: cast_nullable_to_non_nullable
@@ -615,40 +615,40 @@ class _$ArrivalBodyModelCopyWithImpl<$Res, $Val extends ArrivalBodyModel>
     ) as $Val);
   }
 
-  /// Create a copy of ArrivalBodyModel
+  /// Create a copy of AirportBodyModel
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $ArrivalItemsModelCopyWith<$Res> get items {
-    return $ArrivalItemsModelCopyWith<$Res>(_value.items, (value) {
+  $AirportItemsModelCopyWith<$Res> get items {
+    return $AirportItemsModelCopyWith<$Res>(_value.items, (value) {
       return _then(_value.copyWith(items: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$ArrivalBodyModelImplCopyWith<$Res>
-    implements $ArrivalBodyModelCopyWith<$Res> {
-  factory _$$ArrivalBodyModelImplCopyWith(_$ArrivalBodyModelImpl value,
-          $Res Function(_$ArrivalBodyModelImpl) then) =
-      __$$ArrivalBodyModelImplCopyWithImpl<$Res>;
+abstract class _$$AirportBodyModelImplCopyWith<$Res>
+    implements $AirportBodyModelCopyWith<$Res> {
+  factory _$$AirportBodyModelImplCopyWith(_$AirportBodyModelImpl value,
+          $Res Function(_$AirportBodyModelImpl) then) =
+      __$$AirportBodyModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({ArrivalItemsModel items, int totalCount});
+  $Res call({AirportItemsModel items, int totalCount});
 
   @override
-  $ArrivalItemsModelCopyWith<$Res> get items;
+  $AirportItemsModelCopyWith<$Res> get items;
 }
 
 /// @nodoc
-class __$$ArrivalBodyModelImplCopyWithImpl<$Res>
-    extends _$ArrivalBodyModelCopyWithImpl<$Res, _$ArrivalBodyModelImpl>
-    implements _$$ArrivalBodyModelImplCopyWith<$Res> {
-  __$$ArrivalBodyModelImplCopyWithImpl(_$ArrivalBodyModelImpl _value,
-      $Res Function(_$ArrivalBodyModelImpl) _then)
+class __$$AirportBodyModelImplCopyWithImpl<$Res>
+    extends _$AirportBodyModelCopyWithImpl<$Res, _$AirportBodyModelImpl>
+    implements _$$AirportBodyModelImplCopyWith<$Res> {
+  __$$AirportBodyModelImplCopyWithImpl(_$AirportBodyModelImpl _value,
+      $Res Function(_$AirportBodyModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ArrivalBodyModel
+  /// Create a copy of AirportBodyModel
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -656,11 +656,11 @@ class __$$ArrivalBodyModelImplCopyWithImpl<$Res>
     Object? items = null,
     Object? totalCount = null,
   }) {
-    return _then(_$ArrivalBodyModelImpl(
+    return _then(_$AirportBodyModelImpl(
       items: null == items
           ? _value.items
           : items // ignore: cast_nullable_to_non_nullable
-              as ArrivalItemsModel,
+              as AirportItemsModel,
       totalCount: null == totalCount
           ? _value.totalCount
           : totalCount // ignore: cast_nullable_to_non_nullable
@@ -671,27 +671,27 @@ class __$$ArrivalBodyModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$ArrivalBodyModelImpl implements _ArrivalBodyModel {
-  const _$ArrivalBodyModelImpl({required this.items, required this.totalCount});
+class _$AirportBodyModelImpl implements _AirportBodyModel {
+  const _$AirportBodyModelImpl({required this.items, required this.totalCount});
 
-  factory _$ArrivalBodyModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ArrivalBodyModelImplFromJson(json);
+  factory _$AirportBodyModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AirportBodyModelImplFromJson(json);
 
   @override
-  final ArrivalItemsModel items;
+  final AirportItemsModel items;
   @override
   final int totalCount;
 
   @override
   String toString() {
-    return 'ArrivalBodyModel(items: $items, totalCount: $totalCount)';
+    return 'AirportBodyModel(items: $items, totalCount: $totalCount)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ArrivalBodyModelImpl &&
+            other is _$AirportBodyModelImpl &&
             (identical(other.items, items) || other.items == items) &&
             (identical(other.totalCount, totalCount) ||
                 other.totalCount == totalCount));
@@ -701,82 +701,82 @@ class _$ArrivalBodyModelImpl implements _ArrivalBodyModel {
   @override
   int get hashCode => Object.hash(runtimeType, items, totalCount);
 
-  /// Create a copy of ArrivalBodyModel
+  /// Create a copy of AirportBodyModel
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ArrivalBodyModelImplCopyWith<_$ArrivalBodyModelImpl> get copyWith =>
-      __$$ArrivalBodyModelImplCopyWithImpl<_$ArrivalBodyModelImpl>(
+  _$$AirportBodyModelImplCopyWith<_$AirportBodyModelImpl> get copyWith =>
+      __$$AirportBodyModelImplCopyWithImpl<_$AirportBodyModelImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ArrivalBodyModelImplToJson(
+    return _$$AirportBodyModelImplToJson(
       this,
     );
   }
 }
 
-abstract class _ArrivalBodyModel implements ArrivalBodyModel {
-  const factory _ArrivalBodyModel(
-      {required final ArrivalItemsModel items,
-      required final int totalCount}) = _$ArrivalBodyModelImpl;
+abstract class _AirportBodyModel implements AirportBodyModel {
+  const factory _AirportBodyModel(
+      {required final AirportItemsModel items,
+      required final int totalCount}) = _$AirportBodyModelImpl;
 
-  factory _ArrivalBodyModel.fromJson(Map<String, dynamic> json) =
-      _$ArrivalBodyModelImpl.fromJson;
+  factory _AirportBodyModel.fromJson(Map<String, dynamic> json) =
+      _$AirportBodyModelImpl.fromJson;
 
   @override
-  ArrivalItemsModel get items;
+  AirportItemsModel get items;
   @override
   int get totalCount;
 
-  /// Create a copy of ArrivalBodyModel
+  /// Create a copy of AirportBodyModel
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ArrivalBodyModelImplCopyWith<_$ArrivalBodyModelImpl> get copyWith =>
+  _$$AirportBodyModelImplCopyWith<_$AirportBodyModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-ArrivalItemsModel _$ArrivalItemsModelFromJson(Map<String, dynamic> json) {
-  return _ArrivalItemsModel.fromJson(json);
+AirportItemsModel _$AirportItemsModelFromJson(Map<String, dynamic> json) {
+  return _AirportItemsModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$ArrivalItemsModel {
-  List<ArrivalItemModel> get item => throw _privateConstructorUsedError;
+mixin _$AirportItemsModel {
+  List<AirportItemModel> get item => throw _privateConstructorUsedError;
 
-  /// Serializes this ArrivalItemsModel to a JSON map.
+  /// Serializes this AirportItemsModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-  /// Create a copy of ArrivalItemsModel
+  /// Create a copy of AirportItemsModel
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ArrivalItemsModelCopyWith<ArrivalItemsModel> get copyWith =>
+  $AirportItemsModelCopyWith<AirportItemsModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ArrivalItemsModelCopyWith<$Res> {
-  factory $ArrivalItemsModelCopyWith(
-          ArrivalItemsModel value, $Res Function(ArrivalItemsModel) then) =
-      _$ArrivalItemsModelCopyWithImpl<$Res, ArrivalItemsModel>;
+abstract class $AirportItemsModelCopyWith<$Res> {
+  factory $AirportItemsModelCopyWith(
+          AirportItemsModel value, $Res Function(AirportItemsModel) then) =
+      _$AirportItemsModelCopyWithImpl<$Res, AirportItemsModel>;
   @useResult
-  $Res call({List<ArrivalItemModel> item});
+  $Res call({List<AirportItemModel> item});
 }
 
 /// @nodoc
-class _$ArrivalItemsModelCopyWithImpl<$Res, $Val extends ArrivalItemsModel>
-    implements $ArrivalItemsModelCopyWith<$Res> {
-  _$ArrivalItemsModelCopyWithImpl(this._value, this._then);
+class _$AirportItemsModelCopyWithImpl<$Res, $Val extends AirportItemsModel>
+    implements $AirportItemsModelCopyWith<$Res> {
+  _$AirportItemsModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ArrivalItemsModel
+  /// Create a copy of AirportItemsModel
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -787,58 +787,58 @@ class _$ArrivalItemsModelCopyWithImpl<$Res, $Val extends ArrivalItemsModel>
       item: null == item
           ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
-              as List<ArrivalItemModel>,
+              as List<AirportItemModel>,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$ArrivalItemsModelImplCopyWith<$Res>
-    implements $ArrivalItemsModelCopyWith<$Res> {
-  factory _$$ArrivalItemsModelImplCopyWith(_$ArrivalItemsModelImpl value,
-          $Res Function(_$ArrivalItemsModelImpl) then) =
-      __$$ArrivalItemsModelImplCopyWithImpl<$Res>;
+abstract class _$$AirportItemsModelImplCopyWith<$Res>
+    implements $AirportItemsModelCopyWith<$Res> {
+  factory _$$AirportItemsModelImplCopyWith(_$AirportItemsModelImpl value,
+          $Res Function(_$AirportItemsModelImpl) then) =
+      __$$AirportItemsModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<ArrivalItemModel> item});
+  $Res call({List<AirportItemModel> item});
 }
 
 /// @nodoc
-class __$$ArrivalItemsModelImplCopyWithImpl<$Res>
-    extends _$ArrivalItemsModelCopyWithImpl<$Res, _$ArrivalItemsModelImpl>
-    implements _$$ArrivalItemsModelImplCopyWith<$Res> {
-  __$$ArrivalItemsModelImplCopyWithImpl(_$ArrivalItemsModelImpl _value,
-      $Res Function(_$ArrivalItemsModelImpl) _then)
+class __$$AirportItemsModelImplCopyWithImpl<$Res>
+    extends _$AirportItemsModelCopyWithImpl<$Res, _$AirportItemsModelImpl>
+    implements _$$AirportItemsModelImplCopyWith<$Res> {
+  __$$AirportItemsModelImplCopyWithImpl(_$AirportItemsModelImpl _value,
+      $Res Function(_$AirportItemsModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ArrivalItemsModel
+  /// Create a copy of AirportItemsModel
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? item = null,
   }) {
-    return _then(_$ArrivalItemsModelImpl(
+    return _then(_$AirportItemsModelImpl(
       item: null == item
           ? _value._item
           : item // ignore: cast_nullable_to_non_nullable
-              as List<ArrivalItemModel>,
+              as List<AirportItemModel>,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$ArrivalItemsModelImpl implements _ArrivalItemsModel {
-  const _$ArrivalItemsModelImpl({required final List<ArrivalItemModel> item})
+class _$AirportItemsModelImpl implements _AirportItemsModel {
+  const _$AirportItemsModelImpl({required final List<AirportItemModel> item})
       : _item = item;
 
-  factory _$ArrivalItemsModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ArrivalItemsModelImplFromJson(json);
+  factory _$AirportItemsModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AirportItemsModelImplFromJson(json);
 
-  final List<ArrivalItemModel> _item;
+  final List<AirportItemModel> _item;
   @override
-  List<ArrivalItemModel> get item {
+  List<AirportItemModel> get item {
     if (_item is EqualUnmodifiableListView) return _item;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_item);
@@ -846,14 +846,14 @@ class _$ArrivalItemsModelImpl implements _ArrivalItemsModel {
 
   @override
   String toString() {
-    return 'ArrivalItemsModel(item: $item)';
+    return 'AirportItemsModel(item: $item)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ArrivalItemsModelImpl &&
+            other is _$AirportItemsModelImpl &&
             const DeepCollectionEquality().equals(other._item, _item));
   }
 
@@ -862,47 +862,47 @@ class _$ArrivalItemsModelImpl implements _ArrivalItemsModel {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_item));
 
-  /// Create a copy of ArrivalItemsModel
+  /// Create a copy of AirportItemsModel
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ArrivalItemsModelImplCopyWith<_$ArrivalItemsModelImpl> get copyWith =>
-      __$$ArrivalItemsModelImplCopyWithImpl<_$ArrivalItemsModelImpl>(
+  _$$AirportItemsModelImplCopyWith<_$AirportItemsModelImpl> get copyWith =>
+      __$$AirportItemsModelImplCopyWithImpl<_$AirportItemsModelImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ArrivalItemsModelImplToJson(
+    return _$$AirportItemsModelImplToJson(
       this,
     );
   }
 }
 
-abstract class _ArrivalItemsModel implements ArrivalItemsModel {
-  const factory _ArrivalItemsModel(
-      {required final List<ArrivalItemModel> item}) = _$ArrivalItemsModelImpl;
+abstract class _AirportItemsModel implements AirportItemsModel {
+  const factory _AirportItemsModel(
+      {required final List<AirportItemModel> item}) = _$AirportItemsModelImpl;
 
-  factory _ArrivalItemsModel.fromJson(Map<String, dynamic> json) =
-      _$ArrivalItemsModelImpl.fromJson;
+  factory _AirportItemsModel.fromJson(Map<String, dynamic> json) =
+      _$AirportItemsModelImpl.fromJson;
 
   @override
-  List<ArrivalItemModel> get item;
+  List<AirportItemModel> get item;
 
-  /// Create a copy of ArrivalItemsModel
+  /// Create a copy of AirportItemsModel
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ArrivalItemsModelImplCopyWith<_$ArrivalItemsModelImpl> get copyWith =>
+  _$$AirportItemsModelImplCopyWith<_$AirportItemsModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-ArrivalItemModel _$ArrivalItemModelFromJson(Map<String, dynamic> json) {
-  return _ArrivalItemModel.fromJson(json);
+AirportItemModel _$AirportItemModelFromJson(Map<String, dynamic> json) {
+  return _AirportItemModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$ArrivalItemModel {
+mixin _$AirportItemModel {
   String get typeOfFlight => throw _privateConstructorUsedError;
   String get airline => throw _privateConstructorUsedError;
   String get flightId => throw _privateConstructorUsedError;
@@ -920,21 +920,21 @@ mixin _$ArrivalItemModel {
   String get codeshare => throw _privateConstructorUsedError;
   String get masterflightid => throw _privateConstructorUsedError;
 
-  /// Serializes this ArrivalItemModel to a JSON map.
+  /// Serializes this AirportItemModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-  /// Create a copy of ArrivalItemModel
+  /// Create a copy of AirportItemModel
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ArrivalItemModelCopyWith<ArrivalItemModel> get copyWith =>
+  $AirportItemModelCopyWith<AirportItemModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ArrivalItemModelCopyWith<$Res> {
-  factory $ArrivalItemModelCopyWith(
-          ArrivalItemModel value, $Res Function(ArrivalItemModel) then) =
-      _$ArrivalItemModelCopyWithImpl<$Res, ArrivalItemModel>;
+abstract class $AirportItemModelCopyWith<$Res> {
+  factory $AirportItemModelCopyWith(
+          AirportItemModel value, $Res Function(AirportItemModel) then) =
+      _$AirportItemModelCopyWithImpl<$Res, AirportItemModel>;
   @useResult
   $Res call(
       {String typeOfFlight,
@@ -956,16 +956,16 @@ abstract class $ArrivalItemModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ArrivalItemModelCopyWithImpl<$Res, $Val extends ArrivalItemModel>
-    implements $ArrivalItemModelCopyWith<$Res> {
-  _$ArrivalItemModelCopyWithImpl(this._value, this._then);
+class _$AirportItemModelCopyWithImpl<$Res, $Val extends AirportItemModel>
+    implements $AirportItemModelCopyWith<$Res> {
+  _$AirportItemModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ArrivalItemModel
+  /// Create a copy of AirportItemModel
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -1057,11 +1057,11 @@ class _$ArrivalItemModelCopyWithImpl<$Res, $Val extends ArrivalItemModel>
 }
 
 /// @nodoc
-abstract class _$$ArrivalItemModelImplCopyWith<$Res>
-    implements $ArrivalItemModelCopyWith<$Res> {
-  factory _$$ArrivalItemModelImplCopyWith(_$ArrivalItemModelImpl value,
-          $Res Function(_$ArrivalItemModelImpl) then) =
-      __$$ArrivalItemModelImplCopyWithImpl<$Res>;
+abstract class _$$AirportItemModelImplCopyWith<$Res>
+    implements $AirportItemModelCopyWith<$Res> {
+  factory _$$AirportItemModelImplCopyWith(_$AirportItemModelImpl value,
+          $Res Function(_$AirportItemModelImpl) then) =
+      __$$AirportItemModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1084,14 +1084,14 @@ abstract class _$$ArrivalItemModelImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ArrivalItemModelImplCopyWithImpl<$Res>
-    extends _$ArrivalItemModelCopyWithImpl<$Res, _$ArrivalItemModelImpl>
-    implements _$$ArrivalItemModelImplCopyWith<$Res> {
-  __$$ArrivalItemModelImplCopyWithImpl(_$ArrivalItemModelImpl _value,
-      $Res Function(_$ArrivalItemModelImpl) _then)
+class __$$AirportItemModelImplCopyWithImpl<$Res>
+    extends _$AirportItemModelCopyWithImpl<$Res, _$AirportItemModelImpl>
+    implements _$$AirportItemModelImplCopyWith<$Res> {
+  __$$AirportItemModelImplCopyWithImpl(_$AirportItemModelImpl _value,
+      $Res Function(_$AirportItemModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ArrivalItemModel
+  /// Create a copy of AirportItemModel
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -1113,7 +1113,7 @@ class __$$ArrivalItemModelImplCopyWithImpl<$Res>
     Object? codeshare = null,
     Object? masterflightid = null,
   }) {
-    return _then(_$ArrivalItemModelImpl(
+    return _then(_$AirportItemModelImpl(
       typeOfFlight: null == typeOfFlight
           ? _value.typeOfFlight
           : typeOfFlight // ignore: cast_nullable_to_non_nullable
@@ -1184,8 +1184,8 @@ class __$$ArrivalItemModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$ArrivalItemModelImpl implements _ArrivalItemModel {
-  const _$ArrivalItemModelImpl(
+class _$AirportItemModelImpl implements _AirportItemModel {
+  const _$AirportItemModelImpl(
       {required this.typeOfFlight,
       required this.airline,
       required this.flightId,
@@ -1203,8 +1203,8 @@ class _$ArrivalItemModelImpl implements _ArrivalItemModel {
       required this.codeshare,
       required this.masterflightid});
 
-  factory _$ArrivalItemModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ArrivalItemModelImplFromJson(json);
+  factory _$AirportItemModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AirportItemModelImplFromJson(json);
 
   @override
   final String typeOfFlight;
@@ -1241,14 +1241,14 @@ class _$ArrivalItemModelImpl implements _ArrivalItemModel {
 
   @override
   String toString() {
-    return 'ArrivalItemModel(typeOfFlight: $typeOfFlight, airline: $airline, flightId: $flightId, scheduleDateTime: $scheduleDateTime, estimatedDateTime: $estimatedDateTime, airport: $airport, gatenumber: $gatenumber, carousel: $carousel, cityCode: $cityCode, exitnumber: $exitnumber, remark: $remark, airportCode: $airportCode, terminalId: $terminalId, elapsetime: $elapsetime, codeshare: $codeshare, masterflightid: $masterflightid)';
+    return 'AirportItemModel(typeOfFlight: $typeOfFlight, airline: $airline, flightId: $flightId, scheduleDateTime: $scheduleDateTime, estimatedDateTime: $estimatedDateTime, airport: $airport, gatenumber: $gatenumber, carousel: $carousel, cityCode: $cityCode, exitnumber: $exitnumber, remark: $remark, airportCode: $airportCode, terminalId: $terminalId, elapsetime: $elapsetime, codeshare: $codeshare, masterflightid: $masterflightid)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ArrivalItemModelImpl &&
+            other is _$AirportItemModelImpl &&
             (identical(other.typeOfFlight, typeOfFlight) ||
                 other.typeOfFlight == typeOfFlight) &&
             (identical(other.airline, airline) || other.airline == airline) &&
@@ -1301,25 +1301,25 @@ class _$ArrivalItemModelImpl implements _ArrivalItemModel {
       codeshare,
       masterflightid);
 
-  /// Create a copy of ArrivalItemModel
+  /// Create a copy of AirportItemModel
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ArrivalItemModelImplCopyWith<_$ArrivalItemModelImpl> get copyWith =>
-      __$$ArrivalItemModelImplCopyWithImpl<_$ArrivalItemModelImpl>(
+  _$$AirportItemModelImplCopyWith<_$AirportItemModelImpl> get copyWith =>
+      __$$AirportItemModelImplCopyWithImpl<_$AirportItemModelImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ArrivalItemModelImplToJson(
+    return _$$AirportItemModelImplToJson(
       this,
     );
   }
 }
 
-abstract class _ArrivalItemModel implements ArrivalItemModel {
-  const factory _ArrivalItemModel(
+abstract class _AirportItemModel implements AirportItemModel {
+  const factory _AirportItemModel(
       {required final String typeOfFlight,
       required final String airline,
       required final String flightId,
@@ -1335,10 +1335,10 @@ abstract class _ArrivalItemModel implements ArrivalItemModel {
       required final String terminalId,
       required final String elapsetime,
       required final String codeshare,
-      required final String masterflightid}) = _$ArrivalItemModelImpl;
+      required final String masterflightid}) = _$AirportItemModelImpl;
 
-  factory _ArrivalItemModel.fromJson(Map<String, dynamic> json) =
-      _$ArrivalItemModelImpl.fromJson;
+  factory _AirportItemModel.fromJson(Map<String, dynamic> json) =
+      _$AirportItemModelImpl.fromJson;
 
   @override
   String get typeOfFlight;
@@ -1373,10 +1373,10 @@ abstract class _ArrivalItemModel implements ArrivalItemModel {
   @override
   String get masterflightid;
 
-  /// Create a copy of ArrivalItemModel
+  /// Create a copy of AirportItemModel
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ArrivalItemModelImplCopyWith<_$ArrivalItemModelImpl> get copyWith =>
+  _$$AirportItemModelImplCopyWith<_$AirportItemModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

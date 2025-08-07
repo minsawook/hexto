@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hexto/src/core/common/exception/custom_exception.dart';
 import 'package:hexto/src/data/data_source/airport_data_source.dart';
-import 'package:hexto/src/data/model/arrival_response_model.dart';
+import 'package:hexto/src/data/model/airport_response_model.dart';
 import 'package:hexto/src/data/repository/airport_repository.dart';
 import 'package:mocktail/mocktail.dart';
 
@@ -18,14 +18,14 @@ void main() {
     });
 
     test('출발 항공편 조회 성공', () async {
-      ArrivalResponseModel expected = const ArrivalResponseModel(
-        response: ArrivalResponseBodyModel(
+      AirportResponseModel expected = const AirportResponseModel(
+        response: AirportResponseBodyModel(
             header: HeaderModel(
               resultCode: 'resultCode',
               resultMsg: 'resultMsg',
             ),
-            body: ArrivalBodyModel(
-              items: ArrivalItemsModel(item: []),
+            body: AirportBodyModel(
+              items: AirportItemsModel(item: []),
               totalCount: 0,
             )),
       );
@@ -39,7 +39,7 @@ void main() {
             type: any(named: 'type'),
           )).thenAnswer((_) async => expected);
 
-      final ArrivalResponseModel result = await repository.getDepartureFlights(
+      final AirportResponseModel result = await repository.getDepartureFlights(
         fromTime: '0000',
         toTime: '2400',
         airport: 'ICN',

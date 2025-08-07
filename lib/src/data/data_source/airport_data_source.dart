@@ -2,7 +2,7 @@ import 'package:dio/dio.dart' hide Headers;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hexto/src/core/config/api_config.dart';
 import 'package:hexto/src/core/dio/dio.dart';
-import 'package:hexto/src/data/model/arrival_response_model.dart';
+import 'package:hexto/src/data/model/airport_response_model.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:retrofit/retrofit.dart';
 
@@ -20,7 +20,7 @@ abstract class AirportDatasource {
   factory AirportDatasource(Dio dio, {String baseUrl}) = _AirportDatasource;
 
   @GET("/getPassengerDeparturesOdp")
-  Future<ArrivalResponseModel> getPassengerDepartures({
+  Future<AirportResponseModel> getPassengerDepartures({
     @Query("serviceKey") required String serviceKey,
     @Query("from_time") required String fromTime,
     @Query("to_time") required String toTime,

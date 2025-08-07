@@ -22,7 +22,7 @@ class _AirportDatasource implements AirportDatasource {
   final ParseErrorLogger? errorLogger;
 
   @override
-  Future<ArrivalResponseModel> getPassengerDepartures({
+  Future<AirportResponseModel> getPassengerDepartures({
     required String serviceKey,
     required String fromTime,
     required String toTime,
@@ -46,7 +46,7 @@ class _AirportDatasource implements AirportDatasource {
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ArrivalResponseModel>(Options(
+    final _options = _setStreamType<AirportResponseModel>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -63,9 +63,9 @@ class _AirportDatasource implements AirportDatasource {
           baseUrl,
         )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
-    late ArrivalResponseModel _value;
+    late AirportResponseModel _value;
     try {
-      _value = ArrivalResponseModel.fromJson(_result.data!);
+      _value = AirportResponseModel.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;

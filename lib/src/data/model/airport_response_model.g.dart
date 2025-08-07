@@ -1,33 +1,33 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'arrival_response_model.dart';
+part of 'airport_response_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ArrivalResponseModelImpl _$$ArrivalResponseModelImplFromJson(
+_$AirportResponseModelImpl _$$AirportResponseModelImplFromJson(
         Map<String, dynamic> json) =>
-    _$ArrivalResponseModelImpl(
-      response: ArrivalResponseBodyModel.fromJson(
+    _$AirportResponseModelImpl(
+      response: AirportResponseBodyModel.fromJson(
           json['response'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$ArrivalResponseModelImplToJson(
-        _$ArrivalResponseModelImpl instance) =>
+Map<String, dynamic> _$$AirportResponseModelImplToJson(
+        _$AirportResponseModelImpl instance) =>
     <String, dynamic>{
       'response': instance.response,
     };
 
-_$ArrivalResponseBodyModelImpl _$$ArrivalResponseBodyModelImplFromJson(
+_$AirportResponseBodyModelImpl _$$AirportResponseBodyModelImplFromJson(
         Map<String, dynamic> json) =>
-    _$ArrivalResponseBodyModelImpl(
+    _$AirportResponseBodyModelImpl(
       header: HeaderModel.fromJson(json['header'] as Map<String, dynamic>),
-      body: ArrivalBodyModel.fromJson(json['body'] as Map<String, dynamic>),
+      body: AirportBodyModel.fromJson(json['body'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$ArrivalResponseBodyModelImplToJson(
-        _$ArrivalResponseBodyModelImpl instance) =>
+Map<String, dynamic> _$$AirportResponseBodyModelImplToJson(
+        _$AirportResponseBodyModelImpl instance) =>
     <String, dynamic>{
       'header': instance.header,
       'body': instance.body,
@@ -45,37 +45,37 @@ Map<String, dynamic> _$$HeaderModelImplToJson(_$HeaderModelImpl instance) =>
       'resultMsg': instance.resultMsg,
     };
 
-_$ArrivalBodyModelImpl _$$ArrivalBodyModelImplFromJson(
+_$AirportBodyModelImpl _$$AirportBodyModelImplFromJson(
         Map<String, dynamic> json) =>
-    _$ArrivalBodyModelImpl(
-      items: ArrivalItemsModel.fromJson(json['items'] as Map<String, dynamic>),
+    _$AirportBodyModelImpl(
+      items: AirportItemsModel.fromJson(json['items'] as Map<String, dynamic>),
       totalCount: (json['totalCount'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$ArrivalBodyModelImplToJson(
-        _$ArrivalBodyModelImpl instance) =>
+Map<String, dynamic> _$$AirportBodyModelImplToJson(
+        _$AirportBodyModelImpl instance) =>
     <String, dynamic>{
       'items': instance.items,
       'totalCount': instance.totalCount,
     };
 
-_$ArrivalItemsModelImpl _$$ArrivalItemsModelImplFromJson(
+_$AirportItemsModelImpl _$$AirportItemsModelImplFromJson(
         Map<String, dynamic> json) =>
-    _$ArrivalItemsModelImpl(
+    _$AirportItemsModelImpl(
       item: (json['item'] as List<dynamic>)
-          .map((e) => ArrivalItemModel.fromJson(e as Map<String, dynamic>))
+          .map((e) => AirportItemModel.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$ArrivalItemsModelImplToJson(
-        _$ArrivalItemsModelImpl instance) =>
+Map<String, dynamic> _$$AirportItemsModelImplToJson(
+        _$AirportItemsModelImpl instance) =>
     <String, dynamic>{
       'item': instance.item,
     };
 
-_$ArrivalItemModelImpl _$$ArrivalItemModelImplFromJson(
+_$AirportItemModelImpl _$$AirportItemModelImplFromJson(
         Map<String, dynamic> json) =>
-    _$ArrivalItemModelImpl(
+    _$AirportItemModelImpl(
       typeOfFlight: json['typeOfFlight'] as String,
       airline: json['airline'] as String,
       flightId: json['flightId'] as String,
@@ -94,8 +94,8 @@ _$ArrivalItemModelImpl _$$ArrivalItemModelImplFromJson(
       masterflightid: json['masterflightid'] as String,
     );
 
-Map<String, dynamic> _$$ArrivalItemModelImplToJson(
-        _$ArrivalItemModelImpl instance) =>
+Map<String, dynamic> _$$AirportItemModelImplToJson(
+        _$AirportItemModelImpl instance) =>
     <String, dynamic>{
       'typeOfFlight': instance.typeOfFlight,
       'airline': instance.airline,
