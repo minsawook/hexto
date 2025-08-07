@@ -31,9 +31,9 @@ class _FlightListItem extends StatelessWidget {
                 style: const TextStyle(color: AppColors.textSecondary),
               ),
               const SizedBox(height: 4),
-              Text(
-                '${HomeScreenStringConstant.departureLabel}: ${item.cityCode ?? '-'}',
-                style: const TextStyle(color: AppColors.textSecondary),
+              const Text(
+                '${HomeScreenStringConstant.departureLabel}: ${HomeScreenStringConstant.inchone}',
+                style: TextStyle(color: AppColors.textSecondary),
               ),
               const SizedBox(height: 4),
               Text(

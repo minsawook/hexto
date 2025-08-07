@@ -22,13 +22,13 @@ class _FlightSearchFilter extends StatelessWidget {
         Expanded(
           child: TextField(
             controller: controller,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               labelText: HomeScreenStringConstant.arrivalLabel,
-              prefixIcon: const Icon(Icons.search, color: AppColors.primary),
-              focusedBorder: const OutlineInputBorder(
+              prefixIcon: Icon(Icons.search, color: AppColors.primary),
+              focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: AppColors.primary),
               ),
-              enabledBorder: const OutlineInputBorder(
+              enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: AppColors.primaryVariant),
               ),
             ),
@@ -44,17 +44,17 @@ class _FlightSearchFilter extends StatelessWidget {
               borderRadius: BorderRadius.circular(8),
             ),
             child: DropdownButtonHideUnderline(
-              child: DropdownButton<String?> (
+              child: DropdownButton<String?>(
                 value: selectedAirline,
                 isExpanded: true,
                 hint: const Text(HomeScreenStringConstant.airlineHint),
                 items: [
-                  const DropdownMenuItem<String?> (
+                  const DropdownMenuItem<String?>(
                     value: null,
                     child: Text(HomeScreenStringConstant.allAirlines),
                   ),
                   ...airlines.map(
-                    (airline) => DropdownMenuItem<String?> (
+                    (airline) => DropdownMenuItem<String?>(
                       value: airline,
                       child: Text(airline),
                     ),
@@ -69,4 +69,3 @@ class _FlightSearchFilter extends StatelessWidget {
     );
   }
 }
-

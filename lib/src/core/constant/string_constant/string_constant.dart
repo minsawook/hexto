@@ -6,6 +6,7 @@ class HomeScreenStringConstant {
   static const String airlineHint = '항공사';
   static const String allAirlines = '전체 항공사';
   static const String departureLabel = '출발지';
+  static const String inchone = '인천';
   static const String arrivalLabel = '도착지';
   static const String airlineLabel = '항공사';
   static const String flightIdTitle = '항공편 ID';

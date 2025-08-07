@@ -24,40 +24,43 @@ class HomeScreen extends BaseScreen {
   @override
   Widget buildScreen(BuildContext context, WidgetRef ref) {
     final TextEditingController searchController = useTextEditingController();
-    final searchText = useState('');
-    final selectedAirline = useState<String?>(null);
-    final sortField = useState<_SortField>(_SortField.schedule);
-    final isAscending = useState(true);
+    final ValueNotifier<String> searchText = useState('');
+    final ValueNotifier<String?> selectedAirline = useState(null);
+    final ValueNotifier<_SortField> sortField = useState(_SortField.schedule);
+    final ValueNotifier<bool> isAscending = useState(true);
 
     final Debouncer debouncer = useMemoized(Debouncer.new);
     useEffect(() => debouncer.dispose, const []);
 
-    final flightsAsync = ref.watch(airportProvider);
+    final AsyncValue<AirportResponseModel> flightsAsync =
+        ref.watch(airportProvider);
 
     return flightsAsync.when(
       data: (data) {
-        final flights = data.response.body.items.item;
-        final airlines = flights.map((e) => e.airline).toSet().toList();
-        final filteredFlights = flights.where((flight) {
-          final matchesSearch = searchText.value.isEmpty ||
+        final List<AirportItemModel> flights = data.response.body.items.item;
+        final List<String> airlines =
+            flights.map((e) => e.airline).toSet().toList();
+        final List<AirportItemModel> filteredFlights = flights.where((flight) {
+          final bool matchesSearch = searchText.value.isEmpty ||
               (flight.airport ?? '')
                   .toLowerCase()
                   .contains(searchText.value.toLowerCase());
-          final matchesAirline = selectedAirline.value == null ||
+          final bool matchesAirline = selectedAirline.value == null ||
               flight.airline == selectedAirline.value;
           return matchesSearch && matchesAirline;
         }).toList();
 
         filteredFlights.sort((a, b) {
-          DateTime aDate;
-          DateTime bDate;
+          int aDate;
+          int bDate;
           if (sortField.value == _SortField.schedule) {
-            aDate = DateTime.tryParse(a.scheduleDateTime ?? '') ?? DateTime(0);
-            bDate = DateTime.tryParse(b.scheduleDateTime ?? '') ?? DateTime(0);
+            aDate = int.tryParse(a.scheduleDateTime ?? '0') ?? 0;
+            bDate = int.tryParse(b.scheduleDateTime ?? '0') ?? 0;
           } else {
-            aDate = DateTime.tryParse(a.estimatedDateTime ?? '') ?? DateTime(0);
-            bDate = DateTime.tryParse(b.estimatedDateTime ?? '') ?? DateTime(0);
+            aDate = int.tryParse(a.estimatedDateTime ?? '0') ?? 0;
+            bDate = int.tryParse(b.estimatedDateTime ?? '0') ?? 0;
           }
+
           return isAscending.value
               ? aDate.compareTo(bDate)
               : bDate.compareTo(aDate);
