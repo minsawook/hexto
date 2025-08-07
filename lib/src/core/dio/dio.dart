@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:dio/dio.dart';
-import 'package:hexto/src/core/common/exception/custom_exception.dart';
-import 'package:hexto/src/core/util/logger_util.dart';
+import 'package:hecto/src/core/common/exception/custom_exception.dart';
+import 'package:hecto/src/core/util/logger_util.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:riverpod_annotation/riverpod_annotation.dart';

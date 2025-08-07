@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hexto/src/core/common/exception/custom_exception.dart';
-import 'package:hexto/src/data/data_source/airport_data_source.dart';
-import 'package:hexto/src/data/model/airport_response_model.dart';
-import 'package:hexto/src/data/repository/airport_repository.dart';
+import 'package:hecto/src/core/common/exception/custom_exception.dart';
+import 'package:hecto/src/data/data_source/airport_data_source.dart';
+import 'package:hecto/src/data/model/airport_response_model.dart';
+import 'package:hecto/src/data/repository/airport_repository.dart';
 import 'package:mocktail/mocktail.dart';
 
 class _MockAirportDatasource extends Mock implements AirportDatasource {}

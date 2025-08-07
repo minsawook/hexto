@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hexto/src/core/common/exception/custom_exception.dart';
-import 'package:hexto/src/core/constant/string_constant/string_constant.dart';
-import 'package:hexto/src/core/util/throttle.dart';
-
+import 'package:hecto/src/core/common/exception/custom_exception.dart';
+import 'package:hecto/src/core/constant/string_constant/string_constant.dart';
+import 'package:hecto/src/core/util/throttle.dart';
 
 class ErrorView extends StatelessWidget {
   const ErrorView({

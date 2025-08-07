@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hexto/src/core/common/exception/custom_exception.dart';
-import 'package:hexto/src/core/util/throttle.dart';
-import 'package:hexto/src/data/model/airport_response_model.dart';
-import 'package:hexto/src/presentation/common/base/base_screen.dart';
-import 'package:hexto/src/presentation/common/component/loading_indicator.dart';
-import 'package:hexto/src/presentation/home/flight_detail_screen.dart';
-import 'package:hexto/src/presentation/home/provider/home_provider.dart';
-import 'package:hexto/src/core/constant/string_constant/string_constant.dart';
-import 'package:hexto/src/core/theme/app_color.dart';
+import 'package:hecto/src/core/common/exception/custom_exception.dart';
+import 'package:hecto/src/core/util/throttle.dart';
+import 'package:hecto/src/data/model/airport_response_model.dart';
+import 'package:hecto/src/presentation/common/base/base_screen.dart';
+import 'package:hecto/src/presentation/common/component/loading_indicator.dart';
+import 'package:hecto/src/presentation/home/flight_detail_screen.dart';
+import 'package:hecto/src/presentation/home/provider/home_provider.dart';
+import 'package:hecto/src/core/constant/string_constant/string_constant.dart';
+import 'package:hecto/src/core/theme/app_color.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../core/util/debouncer.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hexto/src/core/util/provider_logger.dart';
-import 'package:hexto/src/environment/app_build_setting.dart';
-import 'package:hexto/src/router/router.dart';
+import 'package:hecto/src/core/util/provider_logger.dart';
+import 'package:hecto/src/environment/app_build_setting.dart';
+import 'package:hecto/src/router/router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 Future<void> main() async {
@@ -21,7 +21,7 @@ class App extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp.router(
-      title: 'Hexto',
+      title: 'Hecto',
       debugShowCheckedModeBanner: false,
       routerConfig: ref.watch(routerProvider),
       theme: ThemeData(useMaterial3: true),

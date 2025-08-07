@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hexto/src/presentation/home/flight_detail_screen.dart';
-import 'package:hexto/src/presentation/home/home_screen.dart';
-import 'package:hexto/src/router/router_observer.dart';
+import 'package:hecto/src/presentation/home/flight_detail_screen.dart';
+import 'package:hecto/src/presentation/home/home_screen.dart';
+import 'package:hecto/src/router/router_observer.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:riverpod_annotation/riverpod_annotation.dart';

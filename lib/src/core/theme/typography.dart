@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hexto/src/core/theme/app_color.dart';
+import 'package:hecto/src/core/theme/app_color.dart';
 
 const String fontFamily = 'Roboto';
 

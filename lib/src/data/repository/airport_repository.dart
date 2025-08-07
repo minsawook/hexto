@@ -1,7 +1,7 @@
-import 'package:hexto/src/core/config/api_config.dart';
-import 'package:hexto/src/core/util/api_util.dart';
-import 'package:hexto/src/data/data_source/airport_data_source.dart';
-import 'package:hexto/src/data/model/airport_response_model.dart';
+import 'package:hecto/src/core/config/api_config.dart';
+import 'package:hecto/src/core/util/api_util.dart';
+import 'package:hecto/src/data/data_source/airport_data_source.dart';
+import 'package:hecto/src/data/model/airport_response_model.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 

@@ -1,6 +1,6 @@
 {
-    "name": "hexto",
-    "short_name": "hexto",
+    "name": "hecto",
+    "short_name": "hecto",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

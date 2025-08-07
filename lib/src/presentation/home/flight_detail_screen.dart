@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:hexto/src/data/model/airport_response_model.dart';
-import 'package:hexto/src/presentation/common/base/base_screen.dart';
+import 'package:hecto/src/data/model/airport_response_model.dart';
+import 'package:hecto/src/presentation/common/base/base_screen.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:hexto/src/core/constant/string_constant/string_constant.dart';
-import 'package:hexto/src/core/theme/app_color.dart';
+import 'package:hecto/src/core/constant/string_constant/string_constant.dart';
+import 'package:hecto/src/core/theme/app_color.dart';
 import 'package:intl/intl.dart';
 
 class FlightDetailScreen extends BaseScreen {

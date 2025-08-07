@@ -1,4 +1,4 @@
-package com.example.hexto
+package com.example.hecto
 
 import io.flutter.embedding.android.FlutterActivity
 

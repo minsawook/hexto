@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hexto/src/core/theme/app_color.dart';
-import 'package:hexto/src/core/theme/typography.dart';
+import 'package:hecto/src/core/theme/app_color.dart';
+import 'package:hecto/src/core/theme/typography.dart';
 
 ///기본기능들이 담긴 커스텀 앱바위젯
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {

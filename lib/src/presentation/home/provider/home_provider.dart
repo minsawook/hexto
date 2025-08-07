@@ -1,5 +1,5 @@
-import 'package:hexto/src/data/model/airport_response_model.dart';
-import 'package:hexto/src/data/repository/airport_repository.dart';
+import 'package:hecto/src/data/model/airport_response_model.dart';
+import 'package:hecto/src/data/repository/airport_repository.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'home_provider.g.dart';

@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:hexto/src/core/common/exception/custom_exception.dart';
+import 'package:hecto/src/core/common/exception/custom_exception.dart';
 
 import 'logger_util.dart';
 
